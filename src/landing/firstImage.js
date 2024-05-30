@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import landingImage1 from "../images/landingImage1.jpg";
+import { EmblaCarousel } from "../component/carousel";
 
-export default function FirstImage() {
+export default function FirstImage({ language }) {
   return (
     <Box
       sx={{
@@ -17,46 +17,50 @@ export default function FirstImage() {
         <Box
           sx={{
             position: "absolute",
+            zIndex: 1,
             left: "30%",
             top: "30%",
           }}
         >
           <Typography
-            fontFamily={"Karla"}
+            fontFamily={language ? "Karla" : "Noto Sans KR"}
             fontSize={24}
             color={"#B7B7B7"}
             marginBottom={1}
           >
-            USER CENTERED DESIGN
+            {language ? "USER CENTERED DESIGN" : "사용자 중심의 디자인"}
           </Typography>
           <Typography
-            fontFamily={"Playfair Display"}
+            fontFamily={language ? "Playfair Display" : "Nanum Myeongjo"}
             fontSize={60}
             width={670}
             marginBottom={5}
+            sx={{ whiteSpace: "pre-line" }}
           >
-            The front end developer you were looking for!
+            {language
+              ? "The front end developer you were looking for"
+              : "당신이 찾던\n프론트 엔드 개발자"}
           </Typography>
           <Typography
-            fontFamily={"Karla"}
+            fontFamily={language ? "Karla" : "Noto Sans KR"}
             fontSize={32}
             color={"#616161"}
             width={930}
           >
-            As a front-end developer, I create optimized user experiences
-            through modern, intuitive design and seamless UI interactions.
+            {language
+              ? "As a front-end developer, I create optimized user experiences through modern, intuitive design and seamless UI interactions."
+              : "현대적이고 직관적인 디자인과 끊기거나 기다림 없이 부드러운 UI 경험의 구현을 통해 사용자를 위한 최적의 경험을 제공하고자 합니다."}
           </Typography>
         </Box>
       </Box>
       <Box
         sx={{
-          backgroundImage: `url(${landingImage1})`,
           height: "100%",
           width: "70%",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
         }}
-      />
+      >
+        <EmblaCarousel />
+      </Box>
     </Box>
   );
 }
