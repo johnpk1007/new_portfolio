@@ -5,15 +5,18 @@ import IconButton from "@mui/material/IconButton";
 import English from "../images/english.png";
 import Korean from "../images/korean.png";
 
-export default function Buttons({ language, setLanguage }) {
-  const [selectedValue, setSelectedValue] = useState("first");
-
+export default function Buttons({
+  language,
+  setLanguage,
+  selectedValue,
+  setSelectedValue,
+  scrollToRef,
+}) {
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
 
   const handleClickEvent = () => {
-    console.log("click event");
     setLanguage((language) => !language);
   };
 
@@ -35,10 +38,10 @@ export default function Buttons({ language, setLanguage }) {
   });
 
   return (
-    <Box sx={{ position: "absolute", zIndex: 2 }}>
-      <Radio {...controlProps("first")} />
-      <Radio {...controlProps("second")} />
-      <Radio {...controlProps("third")} />
+    <Box sx={{ position: "fixed", zIndex: 2 }}>
+      <Radio {...controlProps("first")} onClick={() => scrollToRef(0)} />
+      <Radio {...controlProps("second")} onClick={() => scrollToRef(1)} />
+      <Radio {...controlProps("third")} onClick={() => scrollToRef(2)} />
       <Radio {...controlProps("fourth")} />
       <IconButton aria-label="language" onClick={handleClickEvent}>
         <img
