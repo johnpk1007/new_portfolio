@@ -27,3 +27,11 @@
       transform: translate3d(0, -200px, 0) rotate(270deg);
     }
   }
+
+  [data-aos="project-animation"] {
+    transform: translate3d(-600px, 0, 0);
+    transition-property: transform;
+    &.aos-animate {
+      transform: translate3d(0, 0, 0);
+    }
+  }
