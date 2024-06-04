@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 
 export function EmblaCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 6000 }),
+    Autoplay({ delay: 4000, stopOnLastSnap: true }),
   ]);
 
   return (
@@ -16,7 +16,7 @@ export function EmblaCarousel() {
         <div className="embla__slide">
           <Box
             sx={{
-              backgroundImage: `url(${landingImage1})`,
+              backgroundImage: `url(${landingImage3})`,
               height: "100%",
               width: "100%",
               backgroundSize: "cover",
@@ -38,7 +38,7 @@ export function EmblaCarousel() {
         <div className="embla__slide">
           <Box
             sx={{
-              backgroundImage: `url(${landingImage3})`,
+              backgroundImage: `url(${landingImage1})`,
               height: "100%",
               width: "100%",
               backgroundSize: "cover",

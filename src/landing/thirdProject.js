@@ -26,9 +26,9 @@ import ProjectImageComponent from "../component/projectImage";
 
 const ThirdProject = forwardRef(({ language }, ref) => (
   <Box
-    ref={(firstRef) => (ref.current[2] = firstRef)}
+    ref={(thirdRef) => (ref.current[2] = thirdRef)}
     sx={{
-      height: 3500,
+      height: 3400,
       width: "100%",
       display: "flex",
       flexDirection: "column",

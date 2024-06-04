@@ -42,7 +42,7 @@ export default function Buttons({
       <Radio {...controlProps("first")} onClick={() => scrollToRef(0)} />
       <Radio {...controlProps("second")} onClick={() => scrollToRef(1)} />
       <Radio {...controlProps("third")} onClick={() => scrollToRef(2)} />
-      <Radio {...controlProps("fourth")} />
+      <Radio {...controlProps("fourth")} onClick={() => scrollToRef(3)} />
       <IconButton aria-label="language" onClick={handleClickEvent}>
         <img
           src={language ? English : Korean}

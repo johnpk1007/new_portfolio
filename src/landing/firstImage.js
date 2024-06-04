@@ -14,7 +14,13 @@ const FirstImage = forwardRef(({ language }, ref) => (
       justifyContent: "space-between",
     }}
   >
-    <Box sx={{ height: "100%", width: "30%", position: "relative" }}>
+    <Box
+      sx={{
+        height: "100%",
+        width: { xs: "70%", sm: "30%" },
+        position: "relative",
+      }}
+    >
       <Box
         data-aos="fade-right"
         data-aos-once="true"
@@ -28,7 +34,7 @@ const FirstImage = forwardRef(({ language }, ref) => (
       >
         <Typography
           fontFamily={language ? "Karla" : "Noto Sans KR"}
-          fontSize={24}
+          fontSize={{ xs: 10, sm: 24 }}
           fontWeight={200}
           color={"#B7B7B7"}
           marginBottom={1}
@@ -37,7 +43,7 @@ const FirstImage = forwardRef(({ language }, ref) => (
         </Typography>
         <Typography
           fontFamily={language ? "Playfair Display" : "Nanum Myeongjo"}
-          fontSize={60}
+          fontSize={{ xs: 20, sm: 60 }}
           width={670}
           marginBottom={5}
           sx={{ whiteSpace: "pre-line" }}
@@ -48,10 +54,10 @@ const FirstImage = forwardRef(({ language }, ref) => (
         </Typography>
         <Typography
           fontFamily={language ? "Karla" : "Noto Sans KR"}
-          fontSize={32}
+          fontSize={{ xs: 10, sm: 32 }}
           fontWeight={200}
           color={"#616161"}
-          width={930}
+          width={{ xs: 160, md: 400, lg: 600, xl: 930 }}
         >
           {language
             ? "As a front-end developer, I create optimized user experiences through modern, intuitive design and seamless UI interactions."
@@ -62,7 +68,7 @@ const FirstImage = forwardRef(({ language }, ref) => (
     <Box
       sx={{
         height: "100%",
-        width: "70%",
+        width: { xs: "30%", sm: "70%" },
       }}
     >
       <EmblaCarousel />
