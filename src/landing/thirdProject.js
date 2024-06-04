@@ -1,7 +1,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { forwardRef } from "react";
-import Paper from "@mui/material/Paper";
 import ProjectImage from "../images/projectImage.jpg";
 import AngServiceImage from "../images/ang_service.jpg";
 import AngServicePage1 from "../images/ang_service_page_1.jpg";
@@ -16,6 +15,11 @@ import ShimpyoGuestModule from "../images/shimpyo_booking_module_guest.jpg";
 import ShimpyoBookingUnregisteredModule from "../images/shimpyo_booking_unresgistered_module.jpg";
 import ShimpyoConfirmationModule from "../images/shimpyo_booking_confirmation_module.jpg";
 import ShimpyoPaymentModule from "../images/payment_module.jpg";
+import FilmviewImage from "../images/filmview.jpg";
+import FilmviewPage1 from "../images/filmview_page_1.jpg";
+import FilmviewPage2 from "../images/filmview_page_2.jpg";
+import FilmviewPage3 from "../images/filmview_page_3.jpg";
+import FilmviewPage4 from "../images/filmview_page_4.jpg";
 import LinkIcon from "../images/link_icon.png";
 import Link from "@mui/material/Link";
 import ProjectImageComponent from "../component/projectImage";
@@ -199,6 +203,7 @@ const ThirdProject = forwardRef(({ language }, ref) => (
               fontFamily={"Noto Sans KR"}
               fontSize={14}
               fontWeight={200}
+              marginRight={"25px"}
             >
               ▪️ Figma
             </Typography>
@@ -206,6 +211,7 @@ const ThirdProject = forwardRef(({ language }, ref) => (
               fontFamily={"Noto Sans KR"}
               fontSize={14}
               fontWeight={200}
+              marginRight={"25px"}
             >
               ▪️ React
             </Typography>
@@ -213,6 +219,7 @@ const ThirdProject = forwardRef(({ language }, ref) => (
               fontFamily={"Noto Sans KR"}
               fontSize={14}
               fontWeight={200}
+              marginRight={"25px"}
             >
               ▪️ MUI
             </Typography>
@@ -405,13 +412,7 @@ const ThirdProject = forwardRef(({ language }, ref) => (
               fontFamily={"Noto Sans KR"}
               fontSize={14}
               fontWeight={200}
-            >
-              ▪️ Figma
-            </Typography>
-            <Typography
-              fontFamily={"Noto Sans KR"}
-              fontSize={14}
-              fontWeight={200}
+              marginRight={"25px"}
             >
               ▪️ React
             </Typography>
@@ -419,8 +420,32 @@ const ThirdProject = forwardRef(({ language }, ref) => (
               fontFamily={"Noto Sans KR"}
               fontSize={14}
               fontWeight={200}
+              marginRight={"25px"}
+            >
+              ▪️ Typescript
+            </Typography>
+            <Typography
+              fontFamily={"Noto Sans KR"}
+              fontSize={14}
+              fontWeight={200}
+              marginRight={"25px"}
+            >
+              ▪️ Recoil
+            </Typography>
+            <Typography
+              fontFamily={"Noto Sans KR"}
+              fontSize={14}
+              fontWeight={200}
+              marginRight={"25px"}
             >
               ▪️ MUI
+            </Typography>
+            <Typography
+              fontFamily={"Noto Sans KR"}
+              fontSize={14}
+              fontWeight={200}
+            >
+              ▪️ Styled-component
             </Typography>
           </Box>
         </Box>
@@ -488,37 +513,55 @@ const ThirdProject = forwardRef(({ language }, ref) => (
       >
         <ProjectImageComponent
           language={language}
-          English={"February. 2024 - April. 2024"}
-          Korean={"2024.02 - 2020.04"}
-          ImageSrc={AngServiceImage}
+          English={"November. 2022 - May. 2023"}
+          Korean={"2022.11 - 2023.05"}
+          ImageSrc={FilmviewImage}
           PaperHeight={"380px"}
           PaperWidth={"780px"}
           FontSize={30}
         />
-        <ProjectImageComponent
-          language={language}
-          English={"Landing page"}
-          Korean={"메인 페이지"}
-          ImageSrc={AngServicePage1}
-          PaperHeight={"380px"}
-          PaperWidth={"245px"}
-        />
-        <ProjectImageComponent
-          language={language}
-          English={"Service introduction page"}
-          Korean={"서비스 안내 페이지"}
-          ImageSrc={AngServicePage2}
-          PaperHeight={"380px"}
-          PaperWidth={"245px"}
-        />
-        <ProjectImageComponent
-          language={language}
-          English={"Company introduction page"}
-          Korean={"회사 소개 페이지"}
-          ImageSrc={AngServicePage3}
-          PaperHeight={"380px"}
-          PaperWidth={"245px"}
-        />
+        <Box>
+          <ProjectImageComponent
+            language={language}
+            English={"Landing page"}
+            Korean={"메인 페이지"}
+            ImageSrc={FilmviewPage1}
+            PaperHeight={"183px"}
+            PaperWidth={"386px"}
+            MarginBottom={"16px"}
+            BackgroundPosition={"top"}
+          />
+          <ProjectImageComponent
+            language={language}
+            English={"Account delete page"}
+            Korean={"계정 삭제 페이지"}
+            ImageSrc={FilmviewPage2}
+            PaperHeight={"183px"}
+            PaperWidth={"386px"}
+            BackgroundPosition={"top"}
+          />
+        </Box>
+        <Box>
+          <ProjectImageComponent
+            language={language}
+            English={"Movie review page"}
+            Korean={"영화 리뷰 페이지"}
+            ImageSrc={FilmviewPage3}
+            PaperHeight={"183px"}
+            PaperWidth={"386px"}
+            MarginBottom={"16px"}
+            BackgroundPosition={"top"}
+          />
+          <ProjectImageComponent
+            language={language}
+            English={"Writing new movie review page"}
+            Korean={"영화 리뷰 작성 페이지"}
+            ImageSrc={FilmviewPage4}
+            PaperHeight={"183px"}
+            PaperWidth={"386px"}
+            BackgroundPosition={"top"}
+          />
+        </Box>
       </Box>
       <Box>
         <Box marginBottom={"120px"}>
@@ -527,7 +570,7 @@ const ThirdProject = forwardRef(({ language }, ref) => (
             fontSize={32}
             marginBottom={"20px"}
           >
-            ANG Services Corp
+            Filmview
           </Typography>
           <Typography
             fontFamily={language ? "Karla" : "Noto Sans KR"}
@@ -537,21 +580,15 @@ const ThirdProject = forwardRef(({ language }, ref) => (
             marginBottom={"20px"}
           >
             {language
-              ? "A company website created for ANG Services Corp.\nIt is a static site that I designed, developed the front end for, and deployed independently."
-              : "ANG Services Corp 회사의 의뢰를 맡아 제작한 웹사이트입니다.\n정적 웹사이트로서 디자인, 프론트 엔드 개발, 배포를 혼자 담당하였습니다."}
+              ? "Filmview is a sandbox project for a movie review website. \nFor this dynamic site, I designed and developed both the front end and back end, and handled the deployment independently. \nUsers can write, edit, delete, and search reviews, as well as log in locally or via Google and Naver OAuth. \nAdditionally, account creation and deletion are managed through email verification."
+              : "영화 평론 사이트을 구현한 토이 프로젝트입니다. \n동적 웹사이트로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다. \n게시물 생성, 수정, 삭제, 게시물 검색,  로컬 로그인, 구글 로그인, 네이버 로그인, 이메일을 통한 계정 생성, \n이메일을 통한 계정 삭제 등이 가능합니다."}
           </Typography>
           <Box sx={{ display: "flex", flexDirection: "row" }}>
             <Typography
               fontFamily={"Noto Sans KR"}
               fontSize={14}
               fontWeight={200}
-            >
-              ▪️ Figma
-            </Typography>
-            <Typography
-              fontFamily={"Noto Sans KR"}
-              fontSize={14}
-              fontWeight={200}
+              marginRight={"25px"}
             >
               ▪️ React
             </Typography>
@@ -559,14 +596,39 @@ const ThirdProject = forwardRef(({ language }, ref) => (
               fontFamily={"Noto Sans KR"}
               fontSize={14}
               fontWeight={200}
+              marginRight={"25px"}
+            >
+              ▪️ Redux
+            </Typography>
+            <Typography
+              fontFamily={"Noto Sans KR"}
+              fontSize={14}
+              fontWeight={200}
+              marginRight={"25px"}
             >
               ▪️ MUI
+            </Typography>
+            <Typography
+              fontFamily={"Noto Sans KR"}
+              fontSize={14}
+              fontWeight={200}
+              marginRight={"25px"}
+            >
+              ▪️ Mongoose
+            </Typography>
+            <Typography
+              fontFamily={"Noto Sans KR"}
+              fontSize={14}
+              fontWeight={200}
+              marginRight={"25px"}
+            >
+              ▪️ Redis
             </Typography>
           </Box>
         </Box>
         <Box sx={{ display: "inline-flex", flexDirection: "column" }}>
           <Link
-            href="https://github.com/johnpk1007/arc-services-corp"
+            href="https://github.com/johnpk1007/movie_project"
             underline="none"
             fontFamily={language ? "Karla" : "Noto Sans KR"}
             fontSize={20}
@@ -590,7 +652,7 @@ const ThirdProject = forwardRef(({ language }, ref) => (
             />
           </Link>
           <Link
-            href="https://angservicescorp.com/"
+            href="https://filmview.xyz/"
             underline="none"
             fontFamily={language ? "Karla" : "Noto Sans KR"}
             fontSize={20}
@@ -601,9 +663,7 @@ const ThirdProject = forwardRef(({ language }, ref) => (
             target="_blank"
             rel="noopener"
           >
-            {language
-              ? "Visit angservicescorp.com"
-              : "angservicescorp.com 접속"}
+            {language ? "Visit filmview.xyz" : "filmview.xyz 접속"}
             <Box
               sx={{
                 marginLeft: "5px",
