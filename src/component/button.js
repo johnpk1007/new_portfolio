@@ -38,7 +38,14 @@ export default function Buttons({
   });
 
   return (
-    <Box sx={{ position: "fixed", zIndex: 2 }}>
+    <Box
+      sx={{
+        position: "fixed",
+        zIndex: 2,
+        display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
+      }}
+    >
       <Radio {...controlProps("first")} onClick={() => scrollToRef(0)} />
       <Radio {...controlProps("second")} onClick={() => scrollToRef(1)} />
       <Radio {...controlProps("third")} onClick={() => scrollToRef(2)} />

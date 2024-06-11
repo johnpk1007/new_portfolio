@@ -5,7 +5,7 @@ import landingImage2 from "../images/landingImage2.jpg";
 import landingImage3 from "../images/landingImage3.jpg";
 import Box from "@mui/material/Box";
 
-export function EmblaCarousel() {
+export function FirstImageCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000, stopOnLastSnap: true }),
   ]);
@@ -20,7 +20,7 @@ export function EmblaCarousel() {
               height: "100%",
               width: "100%",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: { xs: "55% 50%", sm: "center" },
             }}
           />
         </div>
@@ -31,7 +31,7 @@ export function EmblaCarousel() {
               height: "100%",
               width: "100%",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: { xs: "right", sm: "center" },
             }}
           />
         </div>

@@ -1,4 +1,4 @@
-import { Typography, Box, Paper } from "@mui/material";
+import { Typography, Box, Paper, useTheme, useMediaQuery } from "@mui/material";
 
 export default function ProjectImage({
   language,
@@ -11,23 +11,44 @@ export default function ProjectImage({
   MarginBottom = "0px",
   FontSize = 18,
   BackgroundPosition = "center",
+  sizeProp = "xs",
+  elevation = 3,
+  main = false,
+  exception = false,
 }) {
+  const theme = useTheme();
+  const isAboveBreakpoint = useMediaQuery(theme.breakpoints.up(sizeProp));
+  const stopTransition = main ? "lg" : "xs";
+  const isBelowBreakpointMain = useMediaQuery(theme.breakpoints.down("md"));
+  const isBelowBreakpointAndStop = useMediaQuery(
+    theme.breakpoints.down(stopTransition)
+  );
+
   return (
     <Paper
-      elevation={3}
+      elevation={elevation}
       sx={{
         height: PaperHeight,
         width: PaperWidth,
         marginRight: MarginRight,
-        marginBottom: MarginBottom,
+        marginBottom: main
+          ? isBelowBreakpointMain
+            ? exception
+              ? "70px"
+              : "270px"
+            : 0
+          : MarginBottom,
         overflow: "hidden",
         position: "relative",
-        "&:hover .background-image": {
-          filter: "blur(2px)",
-        },
-        "&:hover .overlay": {
-          opacity: 1,
-        },
+        display: isAboveBreakpoint ? "block" : "none",
+        "&:hover .background-image": isBelowBreakpointAndStop
+          ? {}
+          : { filter: "blur(2px)" },
+        "&:hover .overlay": isBelowBreakpointAndStop
+          ? {}
+          : {
+              opacity: 1,
+            },
       }}
     >
       <Box
@@ -55,7 +76,7 @@ export default function ProjectImage({
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          opacity: 0,
+          opacity: isBelowBreakpointAndStop ? 1 : 0,
           transition: "opacity 0.3s ease",
           padding: "5px",
         }}
@@ -66,6 +87,7 @@ export default function ProjectImage({
           fontWeight={200}
           color={"white"}
           textAlign={"center"}
+          display={isBelowBreakpointAndStop ? "none" : "block"}
         >
           {language ? English : Korean}
         </Typography>

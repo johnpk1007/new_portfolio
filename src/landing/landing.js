@@ -18,17 +18,43 @@ export default function Landing() {
     }
   };
 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     if (scrollPosition < 930) {
+  //       setSelectedValue("first");
+  //     } else if (scrollPosition < 2130) {
+  //       setSelectedValue("second");
+  //     } else if (scrollPosition < 5330) {
+  //       setSelectedValue("third");
+  //     } else {
+  //       setSelectedValue("fourth");
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition < 930) {
-        setSelectedValue("first");
-      } else if (scrollPosition < 2130) {
-        setSelectedValue("second");
-      } else if (scrollPosition < 5330) {
-        setSelectedValue("third");
+      const windowWidth = window.innerWidth;
+      if (windowWidth < 600) {
+      } else if (windowWidth < 900) {
+      } else if (windowWidth < 1200) {
+      } else if (windowWidth < 1536) {
       } else {
-        setSelectedValue("fourth");
+        if (scrollPosition < 930) {
+          setSelectedValue("first");
+        } else if (scrollPosition < 2130) {
+          setSelectedValue("second");
+        } else if (scrollPosition < 5330) {
+          setSelectedValue("third");
+        } else {
+          setSelectedValue("fourth");
+        }
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -48,10 +74,10 @@ export default function Landing() {
           setSelectedValue={setSelectedValue}
           scrollToRef={scrollToRef}
         />
-        <FirstImage language={language} ref={refs} />
-        {/* <SecondSkill language={language} ref={refs} />
+        {/* <FirstImage language={language} ref={refs} /> */}
+        {/* <SecondSkill language={language} ref={refs} /> */}
         <ThirdProject language={language} ref={refs} />
-        <FourthIntroduction language={language} ref={refs} /> */}
+        {/* <FourthIntroduction language={language} ref={refs} /> */}
       </Box>
     </>
   );
