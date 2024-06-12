@@ -1,7 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { forwardRef } from "react";
-import IntroductionImage from "../images/introductionImage.jpg";
+// import IntroductionImage from "../images/introductionImage.jpg";
+import IntroductionImage from "../images/introductionImage.webp";
 import BirthdayIcon from "../images/birthday.png";
 import EmailIcon from "../images/email.png";
 import GraduationIcon from "../images/graduation.png";
@@ -43,18 +44,6 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
         padding: { xs: "15px", md: "30px" },
       }}
     >
-      {/* <Typography
-        position={{ xs: "absolute", md: "relative" }}
-        top={"-100px"}
-        right={"20px"}
-        fontFamily={language ? "Playfair Display" : "Nanum Myeongjo"}
-        fontSize={{ xs: 32, md: 60 }}
-        color={{ xs: "white", md: "black" }}
-        fontWeight={language ? 500 : 400}
-        marginBottom={"70px"}
-      >
-        {language ? "About Me" : "자기소개"}
-      </Typography> */}
       <Typography
         position={{ xs: "absolute", md: "relative" }}
         top={{ xs: "-70px", sm: "-100px", md: 0 }}
@@ -69,10 +58,12 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
       </Typography>
       <Typography
         fontFamily={
-          language ? { xs: "Playfair Display", md: "Karla" } : "Noto Sans KR"
+          language
+            ? { xs: "Playfair Display", md: "Karla" }
+            : { xs: "Nanum Myeongjo", md: "Noto Sans KR" }
         }
-        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
-        fontWeight={200}
+        fontSize={language ? { xs: 16, sm: 18, md: 20 } : { xs: 16, sm: 18 }}
+        fontWeight={{ xs: 700, md: 200 }}
         color={{ xs: "black", md: "#787878" }}
         textAlign={{ xs: "left", md: "center" }}
         marginBottom={{ xs: "15px", md: "30px" }}
@@ -84,7 +75,9 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
       </Typography>
       <Typography
         fontFamily={language ? "Karla" : "Noto Sans KR"}
-        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
+        fontSize={
+          language ? { xs: 16, sm: 18, md: 20 } : { xs: 12, sm: 15, md: 18 }
+        }
         fontWeight={200}
         color={"#787878"}
         textAlign={{ xs: "left", md: "center" }}
@@ -97,7 +90,9 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
       </Typography>
       <Typography
         fontFamily={language ? "Karla" : "Noto Sans KR"}
-        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
+        fontSize={
+          language ? { xs: 16, sm: 18, md: 20 } : { xs: 12, sm: 15, md: 18 }
+        }
         fontWeight={200}
         color={"#787878"}
         textAlign={{ xs: "left", md: "center" }}
@@ -110,7 +105,9 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
       </Typography>
       <Typography
         fontFamily={language ? "Karla" : "Noto Sans KR"}
-        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
+        fontSize={
+          language ? { xs: 16, sm: 18, md: 20 } : { xs: 12, sm: 15, md: 18 }
+        }
         fontWeight={200}
         color={"#787878"}
         textAlign={{ xs: "left", md: "center" }}
@@ -142,7 +139,11 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
+              fontSize={
+                language
+                  ? { xs: 14, sm: 17, md: 20 }
+                  : { xs: 14, sm: 16, md: 18 }
+              }
               fontWeight={200}
               color={"#616161"}
               textAlign={"left"}
@@ -169,7 +170,11 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
+              fontSize={
+                language
+                  ? { xs: 14, sm: 17, md: 20 }
+                  : { xs: 14, sm: 16, md: 18 }
+              }
               fontWeight={200}
               color={"#616161"}
               textAlign={"left"}
@@ -197,7 +202,11 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
+              fontSize={
+                language
+                  ? { xs: 14, sm: 17, md: 20 }
+                  : { xs: 14, sm: 16, md: 18 }
+              }
               fontWeight={200}
               color={"#616161"}
             >
@@ -217,7 +226,11 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
+              fontSize={
+                language
+                  ? { xs: 14, sm: 17, md: 20 }
+                  : { xs: 14, sm: 16, md: 18 }
+              }
               fontWeight={200}
               color={"#616161"}
             >

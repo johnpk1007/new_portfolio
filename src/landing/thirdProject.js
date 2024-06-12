@@ -1,7 +1,8 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { forwardRef, useEffect } from "react";
-import ProjectImage from "../images/projectImage.jpg";
+// import ProjectImage from "../images/projectImage.jpg";
+import ProjectImage from "../images/projectImage.webp";
 import AngServiceImage from "../images/ang_service.jpg";
 import AngServicePage1 from "../images/ang_service_page_1.jpg";
 import AngServicePage2 from "../images/ang_service_page_2.jpg";
@@ -314,14 +315,16 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       observerOptions
     );
 
-    projectRefs.current.forEach((ref) => {
+    const currentRefs = projectRefs.current;
+
+    currentRefs.forEach((ref) => {
       if (ref) {
         observer.observe(ref);
       }
     });
 
     return () => {
-      projectRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) {
           observer.unobserve(ref);
         }
@@ -333,7 +336,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
     <Box
       ref={(thirdRef) => (ref.current[2] = thirdRef)}
       sx={{
-        height: { xs: 2900, md: 3400 },
+        // height: { xs: 2900, md: 3400 },
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -554,7 +557,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               {language
                 ? "A company website created for ANG Services Corp."
-                : "ANG Services Corp 회사의 의뢰를 맡아 제작한 웹사이트입니다.\n정적 웹사이트로서 디자인, 프론트 엔드 개발, 배포를 혼자 담당하였습니다."}
+                : "ANG Services Corp 회사의 의뢰를 맡아 제작한 웹사이트입니다."}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
@@ -565,7 +568,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               {language
                 ? "It is a static site that I designed, \ndeveloped the front end for, and deployed independently."
-                : "ANG Services Corp 회사의 의뢰를 맡아 제작한 웹사이트입니다.\n정적 웹사이트로서 디자인, 프론트 엔드 개발, 배포를 혼자 담당하였습니다."}
+                : "정적 웹사이트로서 디자인, 프론트 엔드 개발, 배포를 혼자 담당하였습니다."}
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "row" }}>
               <Typography
@@ -817,7 +820,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               {language
                 ? "Shimpyo is a group sandbox project for a hotel booking website. \nOur team consisted of six developers: three front-end and three back-end. "
-                : "숙박 플랫폼을 구현한 그룹 토이 프로젝트입니다. 프론트 엔드 3명, 백 엔드 3명, 총 6명의 팀원이 참여하였으며 저는 메인 페이지, 숙소 페이지, 결제 시스템 등을 담당하여 구현하였습니다. \n현재 웹사이트는 운영을 종료하였으나 대신 시연영상을 시청하실 수 있습니다."}
+                : "숙박 플랫폼을 구현한 그룹 토이 프로젝트입니다. \n프론트 엔드 3명, 백 엔드 3명, 총 6명의 팀원이 참여하였으며"}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
@@ -827,7 +830,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               {language
                 ? "I was responsible for developing the front end of the landing page, \nhotel page, and payment system."
-                : "숙박 플랫폼을 구현한 그룹 토이 프로젝트입니다. 프론트 엔드 3명, 백 엔드 3명, 총 6명의 팀원이 참여하였으며 저는 메인 페이지, 숙소 페이지, 결제 시스템 등을 담당하여 구현하였습니다. \n현재 웹사이트는 운영을 종료하였으나 대신 시연영상을 시청하실 수 있습니다."}
+                : "저는 메인 페이지, 숙소 페이지, 결제 시스템 등을 담당하여 구현하였습니다. "}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
@@ -838,7 +841,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               {language
                 ? "Although the website has been shut down due to payment issues, \nyou can watch a demonstration video if you're interested."
-                : "숙박 플랫폼을 구현한 그룹 토이 프로젝트입니다. 프론트 엔드 3명, 백 엔드 3명, 총 6명의 팀원이 참여하였으며 저는 메인 페이지, 숙소 페이지, 결제 시스템 등을 담당하여 구현하였습니다. \n현재 웹사이트는 운영을 종료하였으나 대신 시연영상을 시청하실 수 있습니다."}
+                : "현재 웹사이트는 운영을 종료하였으나 대신 시연영상을 시청하실 수 있습니다."}
             </Typography>
 
             <Box
@@ -1082,7 +1085,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               {language
                 ? "For this dynamic site, I designed and developed both the front end and back end, \nand handled the deployment independently."
-                : "영화 평론 사이트을 구현한 토이 프로젝트입니다."}
+                : "동적 웹사이트로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다."}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
@@ -1092,17 +1095,18 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               {language
                 ? "Users can write, edit, delete, and search reviews, \nas well as log in locally or via Google and Naver OAuth."
-                : "영화 평론 사이트을 구현한 토이 프로젝트입니다."}
+                : "게시물 생성, 수정, 삭제, 게시물 검색,  로컬 로그인, 구글 로그인, 네이버 로그인, "}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
               fontSize={{ xs: 14, md: 20 }}
               fontWeight={200}
               whiteSpace={{ xs: "pre-line", lg: "normal" }}
+              marginBottom={"20px"}
             >
               {language
                 ? "Additionally, account creation and deletion are managed through email verification."
-                : "영화 평론 사이트을 구현한 토이 프로젝트입니다."}
+                : "이메일을 통한 계정 생성, 이메일을 통한 계정 삭제 등이 가능합니다."}
             </Typography>
             <Box
               sx={{

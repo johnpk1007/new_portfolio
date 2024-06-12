@@ -5,9 +5,10 @@ import { forwardRef, useImperativeHandle } from "react";
 
 export const ThirdSkillCarouselSmall = forwardRef(
   ({ First, Second, Third }, ref) => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: "auto" }, [
-      Autoplay({ delay: 4000, stopOnLastSnap: true, playOnInit: false }),
-    ]);
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+      { slidesToScroll: "auto", loop: "true" },
+      [Autoplay({ stopOnLastSnap: true, playOnInit: false })]
+    );
 
     const toggleAutoplay = useCallback(() => {
       const autoplay = emblaApi?.plugins()?.autoplay;

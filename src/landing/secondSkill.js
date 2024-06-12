@@ -1,6 +1,8 @@
 import Box from "@mui/material/Box";
-import SkillImage1 from "../images/skillImage1.jpg";
-import SkillImage2 from "../images/skillImage2.jpg";
+// import SkillImage1 from "../images/skillImage1.jpg";
+// import SkillImage2 from "../images/skillImage2.jpg";
+import SkillImage1 from "../images/skillImage1.webp";
+import SkillImage2 from "../images/skillImage2.webp";
 import { Typography } from "@mui/material";
 import FrontEndIcon from "../images/frontendicon.png";
 import FrameworkIcon from "../images/frameworkIcon.png";

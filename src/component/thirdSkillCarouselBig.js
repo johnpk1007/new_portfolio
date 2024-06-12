@@ -6,7 +6,7 @@ import { forwardRef, useImperativeHandle } from "react";
 export const ThirdSkillCarouselBig = forwardRef(
   ({ First, Second, Third }, ref) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: "auto" }, [
-      Autoplay({ delay: 4000, stopOnLastSnap: true, playOnInit: false }),
+      Autoplay({ stopOnLastSnap: true, playOnInit: false }),
     ]);
 
     const toggleAutoplay = useCallback(() => {

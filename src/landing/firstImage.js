@@ -27,13 +27,15 @@ const FirstImage = forwardRef(({ language }, ref) => {
       }
     );
 
-    if (boxRef.current) {
-      observer.observe(boxRef.current);
+    const currentRef = boxRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (boxRef.current) {
-        observer.unobserve(boxRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -46,6 +48,7 @@ const FirstImage = forwardRef(({ language }, ref) => {
         display: "flex",
         direction: "row",
         justifyContent: "space-between",
+        position: "relative",
       }}
     >
       <Box
@@ -108,7 +111,7 @@ const FirstImage = forwardRef(({ language }, ref) => {
             display: { xs: "block", sm: "none" },
             position: "absolute",
             zIndex: 0,
-            left: { xs: "20%" },
+            left: "20%",
             top: "20%",
             height: "400px",
             width: "130px",
@@ -121,6 +124,9 @@ const FirstImage = forwardRef(({ language }, ref) => {
         className="small"
         sx={{
           height: "100%",
+          position: "absolute",
+          top: 0,
+          right: "-20px",
           width: { xs: "30%", xsm: "40%", sm: "70%" },
         }}
       >
