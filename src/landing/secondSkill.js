@@ -156,18 +156,6 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             </Typography>
           </Box>
         </Box>
-        <Box
-          sx={{
-            display: { xs: "block", md: "none" },
-            zIndex: -1,
-            position: "absolute",
-            backgroundColor: "#f8f8f8",
-            width: "45%",
-            height: "80px",
-            left: 0,
-            bottom: 0,
-          }}
-        />
       </Box>
 
       <Box
@@ -292,7 +280,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
         />
       </Box>
     </Box>
-    <Box />
+    <Box height={"100px"} />
   </Box>
 ));
 

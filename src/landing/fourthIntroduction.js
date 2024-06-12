@@ -11,59 +11,97 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
   <Box
     ref={(fourthRef) => (ref.current[3] = fourthRef)}
     sx={{
-      height: 800,
+      height: { xs: 1000, md: 800 },
       width: "100%",
       display: "flex",
-      flexDirection: "row",
+      flexDirection: { xs: "column", md: "row" },
+      position: "relative",
     }}
   >
     <Box
       sx={{
         backgroundImage: `url(${IntroductionImage})`,
-        height: "100%",
-        width: "40%",
+        height: { xs: "70vw", md: "100%" },
+        width: { xs: "100vw", md: "40%" },
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     />
+
     <Box
       sx={{
-        height: "100%",
-        width: "60%",
+        height: { xs: "calc(100%-70vw)", md: "100%" },
+        width: "75%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: { xs: "flex-start", md: "center" },
+        alignItems: { xs: "flex-start", md: "center" },
+        position: { xs: "absolute", md: "relative" },
+        backgroundColor: "white",
+        right: 0,
+        top: { xs: "50vw", md: 0 },
+        padding: { xs: "15px", md: "30px" },
       }}
     >
-      <Typography
+      {/* <Typography
+        position={{ xs: "absolute", md: "relative" }}
+        top={"-100px"}
+        right={"20px"}
         fontFamily={language ? "Playfair Display" : "Nanum Myeongjo"}
-        fontSize={60}
+        fontSize={{ xs: 32, md: 60 }}
+        color={{ xs: "white", md: "black" }}
+        fontWeight={language ? 500 : 400}
+        marginBottom={"70px"}
+      >
+        {language ? "About Me" : "자기소개"}
+      </Typography> */}
+      <Typography
+        position={{ xs: "absolute", md: "relative" }}
+        top={{ xs: "-70px", sm: "-100px", md: 0 }}
+        right={{ xs: "20px", sm: "50px", md: 0 }}
+        fontFamily={language ? "Playfair Display" : "Nanum Myeongjo"}
+        fontSize={{ xs: 32, sm: 46, md: 60 }}
+        color={{ xs: "white", md: "black" }}
         fontWeight={language ? 500 : 400}
         marginBottom={"70px"}
       >
         {language ? "About Me" : "자기소개"}
       </Typography>
       <Typography
-        fontFamily={language ? "Karla" : "Noto Sans KR"}
-        fontSize={language ? 20 : 18}
+        fontFamily={
+          language ? { xs: "Playfair Display", md: "Karla" } : "Noto Sans KR"
+        }
+        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
         fontWeight={200}
-        color={"#787878"}
-        textAlign={"center"}
-        marginBottom={"30px"}
+        color={{ xs: "black", md: "#787878" }}
+        textAlign={{ xs: "left", md: "center" }}
+        marginBottom={{ xs: "15px", md: "30px" }}
         whiteSpace={"pre-line"}
       >
         {language
-          ? "Hello, I'm Hyun Jun Park, a front-end developer. \nI chose this career path out of a fascination with everything design-related and \nwith the hope of bringing my visions to life."
-          : "안녕하세요. 프론트 엔드 개발자 박현준입니다. \n제 머릿속에 있던 구상을 웹에 그대로 구현하여 사람들과 공유할 수 있다는 점에 끌려 \n프론트 엔드 개발자가 되기로 하였습니다."}
+          ? "Hello, I'm Hyun Jun Park, a front-end developer. "
+          : "안녕하세요. 프론트 엔드 개발자 박현준입니다."}
       </Typography>
       <Typography
         fontFamily={language ? "Karla" : "Noto Sans KR"}
-        fontSize={language ? 20 : 18}
+        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
         fontWeight={200}
         color={"#787878"}
-        textAlign={"center"}
-        marginBottom={"30px"}
+        textAlign={{ xs: "left", md: "center" }}
+        marginBottom={{ xs: "15px", md: "30px" }}
+        whiteSpace={"pre-line"}
+      >
+        {language
+          ? "I chose this career path out of a fascination with everything design-related and \nwith the hope of bringing my visions to life."
+          : "제 머릿속에 있던 구상을 웹에 그대로 구현하여 사람들과 공유할 수 있다는 점에 끌려 \n프론트 엔드 개발자가 되기로 하였습니다."}
+      </Typography>
+      <Typography
+        fontFamily={language ? "Karla" : "Noto Sans KR"}
+        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
+        fontWeight={200}
+        color={"#787878"}
+        textAlign={{ xs: "left", md: "center" }}
+        marginBottom={{ xs: "15px", md: "30px" }}
         whiteSpace={"pre-line"}
       >
         {language
@@ -72,18 +110,18 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
       </Typography>
       <Typography
         fontFamily={language ? "Karla" : "Noto Sans KR"}
-        fontSize={language ? 20 : 18}
+        fontSize={language ? { xs: 16, sm: 18, md: 20 } : 18}
         fontWeight={200}
         color={"#787878"}
-        textAlign={"center"}
+        textAlign={{ xs: "left", md: "center" }}
+        marginBottom={{ xs: "30px", md: "60px" }}
         whiteSpace={"pre-line"}
-        marginBottom={"60px"}
       >
         {language
           ? "Completing a project takes precedence and requires discipline—both skills I possess."
           : "프로젝트에 투입되었을 때 저의 모든 관심과 역량을 쏟아붇는 모습을 보게 되실 것을 약속드립니다."}
       </Typography>
-      <Box display={"flex"} flexDirection={"row"}>
+      <Box display={"flex"} flexDirection={{ xs: "column", md: "row" }}>
         <Box display={"flex"} flexDirection={"column"} marginRight={"30px"}>
           <Box
             display={"flex"}
@@ -100,12 +138,11 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 marginRight: "19px",
-                marginLeft: "4px",
               }}
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? 20 : 18}
+              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
               fontWeight={200}
               color={"#616161"}
               textAlign={"left"}
@@ -118,12 +155,13 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             flexDirection={"row"}
             justifyContent={"flex-start"}
             alignItems={"center"}
+            marginBottom={"15px"}
           >
             <Box
               sx={{
                 backgroundImage: `url(${GraduationIcon})`,
-                height: "26px",
-                width: "26px",
+                height: "18px",
+                width: "18px",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 marginRight: "15px",
@@ -131,7 +169,7 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? 20 : 18}
+              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
               fontWeight={200}
               color={"#616161"}
               textAlign={"left"}
@@ -159,7 +197,7 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? 20 : 18}
+              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
               fontWeight={200}
               color={"#616161"}
             >
@@ -179,7 +217,7 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
             />
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={language ? 20 : 18}
+              fontSize={language ? { xs: 14, sm: 17, md: 20 } : 18}
               fontWeight={200}
               color={"#616161"}
             >
