@@ -49,6 +49,7 @@ const FirstImage = forwardRef(({ language }, ref) => {
         direction: "row",
         justifyContent: "space-between",
         position: "relative",
+        overflow: "hidden",
       }}
     >
       <Box
@@ -126,7 +127,7 @@ const FirstImage = forwardRef(({ language }, ref) => {
           height: "100%",
           position: "absolute",
           top: 0,
-          right: "-20px",
+          right: "-25px",
           width: { xs: "30%", xsm: "40%", sm: "70%" },
         }}
       >
