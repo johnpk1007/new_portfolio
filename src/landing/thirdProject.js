@@ -1,26 +1,25 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { forwardRef, useEffect } from "react";
-// import ProjectImage from "../images/projectImage.jpg";
 import ProjectImage from "../images/projectImage.webp";
-import AngServiceImage from "../images/ang_service.jpg";
-import AngServicePage1 from "../images/ang_service_page_1.jpg";
-import AngServicePage2 from "../images/ang_service_page_2.jpg";
-import AngServicePage3 from "../images/ang_service_page_3.jpg";
-import Shimpyo from "../images/shimpyo.jpg";
-import ShimpyoPage1 from "../images/shimpyo_page_1.jpg";
-import ShimpyoPage2 from "../images/shimpyo_page_2.jpg";
-import ShimpyoCalendarModule from "../images/shimpyo_calendar_module.jpg";
-import ShimpyoBookingMdodule from "../images/shimpyo_booking_module_date.jpg";
-import ShimpyoGuestModule from "../images/shimpyo_booking_module_guest.jpg";
-import ShimpyoBookingUnregisteredModule from "../images/shimpyo_booking_unresgistered_module.jpg";
-import ShimpyoConfirmationModule from "../images/shimpyo_booking_confirmation_module.jpg";
-import ShimpyoPaymentModule from "../images/payment_module.jpg";
-import FilmviewImage from "../images/filmview.jpg";
-import FilmviewPage1 from "../images/filmview_page_1.jpg";
-import FilmviewPage2 from "../images/filmview_page_2.jpg";
-import FilmviewPage3 from "../images/filmview_page_3.jpg";
-import FilmviewPage4 from "../images/filmview_page_4.jpg";
+import AngServiceImage from "../images/ang_service.webp";
+import AngServicePage1 from "../images/ang_service_page_1.webp";
+import AngServicePage2 from "../images/ang_service_page_2.webp";
+import AngServicePage3 from "../images/ang_service_page_3.webp";
+import Shimpyo from "../images/shimpyo.webp";
+import ShimpyoPage1 from "../images/shimpyo_page_1.webp";
+import ShimpyoPage2 from "../images/shimpyo_page_2.webp";
+import ShimpyoCalendarModule from "../images/shimpyo_calendar_module.webp";
+import ShimpyoBookingMdodule from "../images/shimpyo_booking_module_date.webp";
+import ShimpyoGuestModule from "../images/shimpyo_booking_module_guest.webp";
+import ShimpyoBookingUnregisteredModule from "../images/shimpyo_booking_unresgistered_module.webp";
+import ShimpyoConfirmationModule from "../images/shimpyo_booking_confirmation_module.webp";
+import ShimpyoPaymentModule from "../images/payment_module.webp";
+import FilmviewImage from "../images/filmview.webp";
+import FilmviewPage1 from "../images/filmview_page_1.webp";
+import FilmviewPage2 from "../images/filmview_page_2.webp";
+import FilmviewPage3 from "../images/filmview_page_3.webp";
+import FilmviewPage4 from "../images/filmview_page_4.webp";
 import LinkIcon from "../images/link_icon.png";
 import Link from "@mui/material/Link";
 import ProjectImageComponent from "../component/projectImage";
@@ -1162,7 +1161,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://github.com/johnpk1007/movie_project"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={20}
+              fontSize={{ xs: 14, md: 20 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -1186,7 +1185,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://filmview.xyz/"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={20}
+              fontSize={{ xs: 14, md: 20 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
