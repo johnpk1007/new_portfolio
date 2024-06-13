@@ -4,9 +4,10 @@ import landingImage1 from "../images/landingImage1.webp";
 import landingImage2 from "../images/landingImage2.webp";
 import landingImage3 from "../images/landingImage3.webp";
 import Box from "@mui/material/Box";
-import { forwardRef, useImperativeHandle, useCallback } from "react";
+import { forwardRef, useImperativeHandle, useCallback, useState } from "react";
 
 export const FirstImageCarousel = forwardRef((props, ref) => {
+  const [played, setPlayed] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { slidesToScroll: "auto", loop: "true" },
     [Autoplay({ stopOnLastSnap: true, playOnInit: false })]
@@ -17,8 +18,11 @@ export const FirstImageCarousel = forwardRef((props, ref) => {
     if (!autoplay) return;
 
     const playOrStop = autoplay.isPlaying() ? autoplay.stop : autoplay.play;
-    playOrStop();
-  }, [emblaApi]);
+    if (played === false) {
+      playOrStop();
+      setPlayed(true);
+    }
+  }, [emblaApi, played]);
 
   useImperativeHandle(ref, () => ({
     toggleAutoplay: () => toggleAutoplay(),

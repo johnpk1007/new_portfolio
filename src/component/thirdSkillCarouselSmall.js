@@ -1,10 +1,11 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
-import { forwardRef, useImperativeHandle } from "react";
+import { forwardRef, useImperativeHandle, useState } from "react";
 
 export const ThirdSkillCarouselSmall = forwardRef(
   ({ First, Second, Third }, ref) => {
+    const [played, setPlayed] = useState(false);
     const [emblaRef, emblaApi] = useEmblaCarousel(
       { slidesToScroll: "auto", loop: "true" },
       [
@@ -21,8 +22,11 @@ export const ThirdSkillCarouselSmall = forwardRef(
       if (!autoplay) return;
 
       const playOrStop = autoplay.isPlaying() ? autoplay.stop : autoplay.play;
-      playOrStop();
-    }, [emblaApi]);
+      if (played === false) {
+        playOrStop();
+        setPlayed(true);
+      }
+    }, [emblaApi, played]);
 
     useImperativeHandle(ref, () => ({
       toggleAutoplay: () => toggleAutoplay(),
