@@ -67,11 +67,11 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
         color={{ xs: "black", md: "#787878" }}
         textAlign={{ xs: "left", md: "center" }}
         marginBottom={{ xs: "15px", md: "30px" }}
-        whiteSpace={"pre-line"}
+        whiteSpace={{ xs: "pre-line", sm: "normal" }}
       >
         {language
-          ? "Hello, I'm Hyun Jun Park, a front-end developer. "
-          : "안녕하세요. 프론트 엔드 개발자 박현준입니다."}
+          ? "Hello, I'm Hyun Jun Park, \na front-end developer. "
+          : "안녕하세요. \n프론트 엔드 개발자 박현준입니다."}
       </Typography>
       <Typography
         fontFamily={language ? "Karla" : "Noto Sans KR"}

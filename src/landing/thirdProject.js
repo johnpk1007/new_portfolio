@@ -194,9 +194,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
     <Box>
       <ProjectImageComponent
         language={language}
-        English={"Movie review page"}
-        Korean={"영화 리뷰 페이지"}
-        ImageSrc={FilmviewPage3}
+        English={"Writing new movie review page"}
+        Korean={"영화 리뷰 작성 페이지"}
+        ImageSrc={FilmviewPage4}
         PaperHeight={"175px"}
         PaperWidth={"370px"}
         MarginBottom={"20px"}
@@ -204,9 +204,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       />
       <ProjectImageComponent
         language={language}
-        English={"Writing new movie review page"}
-        Korean={"영화 리뷰 작성 페이지"}
-        ImageSrc={FilmviewPage4}
+        English={"Movie review page"}
+        Korean={"영화 리뷰 페이지"}
+        ImageSrc={FilmviewPage3}
         PaperHeight={"175px"}
         PaperWidth={"370px"}
         BackgroundPosition={"top"}
@@ -241,9 +241,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
   const FilmviewPage4_3Component = () => (
     <ProjectImageComponent
       language={language}
-      English={"Movie review page"}
-      Korean={"영화 리뷰 페이지"}
-      ImageSrc={FilmviewPage3}
+      English={"Writing new movie review page"}
+      Korean={"영화 리뷰 작성 페이지"}
+      ImageSrc={FilmviewPage4}
       PaperHeight={"175px"}
       PaperWidth={"370px"}
       BackgroundPosition={"top"}
@@ -253,9 +253,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
   const FilmviewPage4_4Component = () => (
     <ProjectImageComponent
       language={language}
-      English={"Writing new movie review page"}
-      Korean={"영화 리뷰 작성 페이지"}
-      ImageSrc={FilmviewPage4}
+      English={"Movie review page"}
+      Korean={"영화 리뷰 페이지"}
+      ImageSrc={FilmviewPage3}
       PaperHeight={"175px"}
       PaperWidth={"370px"}
       BackgroundPosition={"top"}
@@ -539,7 +539,10 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             sizeProp="xxl"
           />
         </Box>
-        <Box marginLeft={{ xs: "25px", md: 0 }}>
+        <Box
+          marginLeft={{ xs: "50px", md: 0 }}
+          paddingRight={{ xs: "50px", md: 0 }}
+        >
           <Box marginBottom={{ xs: "25px", md: "120px" }}>
             <Typography
               fontFamily={"Playfair Display"}
@@ -801,7 +804,10 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             </Box>
           </Box>
         </Box>
-        <Box marginLeft={{ xs: "25px", md: 0 }}>
+        <Box
+          marginLeft={{ xs: "50px", md: 0 }}
+          paddingRight={{ xs: "50px", md: 0 }}
+        >
           <Box marginBottom={{ xs: "25px", md: "120px" }}>
             <Typography
               fontFamily={"Playfair Display"}
@@ -1038,9 +1044,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           <Box display={{ xs: "none", xxl: "block" }}>
             <ProjectImageComponent
               language={language}
-              English={"Movie review page"}
-              Korean={"영화 리뷰 페이지"}
-              ImageSrc={FilmviewPage3}
+              English={"Writing new movie review page"}
+              Korean={"영화 리뷰 작성 페이지"}
+              ImageSrc={FilmviewPage4}
               PaperHeight={"178px"}
               PaperWidth={"386px"}
               MarginBottom={"16px"}
@@ -1048,16 +1054,19 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             />
             <ProjectImageComponent
               language={language}
-              English={"Writing new movie review page"}
-              Korean={"영화 리뷰 작성 페이지"}
-              ImageSrc={FilmviewPage4}
+              English={"Movie review page"}
+              Korean={"영화 리뷰 페이지"}
+              ImageSrc={FilmviewPage3}
               PaperHeight={"178px"}
               PaperWidth={"386px"}
               BackgroundPosition={"top"}
             />
           </Box>
         </Box>
-        <Box marginLeft={{ xs: "25px", lg: 0 }}>
+        <Box
+          marginLeft={{ xs: "50px", md: 0 }}
+          paddingRight={{ xs: "50px", md: 0 }}
+        >
           <Box marginBottom={"120px"}>
             <Typography
               fontFamily={"Playfair Display"}
