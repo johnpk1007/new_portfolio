@@ -7,7 +7,13 @@ export const ThirdSkillCarouselSmall = forwardRef(
   ({ First, Second, Third }, ref) => {
     const [emblaRef, emblaApi] = useEmblaCarousel(
       { slidesToScroll: "auto", loop: "true" },
-      [Autoplay({ stopOnLastSnap: true, playOnInit: false })]
+      [
+        Autoplay({
+          stopOnLastSnap: true,
+          playOnInit: false,
+          stopOnInteraction: false,
+        }),
+      ]
     );
 
     const toggleAutoplay = useCallback(() => {
