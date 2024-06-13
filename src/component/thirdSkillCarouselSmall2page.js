@@ -2,6 +2,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
 import { forwardRef, useImperativeHandle } from "react";
+import { DotButton, useDotButton } from "./emblaCarouselDotButton";
+import { Box } from "@mui/material";
 
 export const ThirdSkillCarouselSmall2page = forwardRef(
   ({ First, Second }, ref) => {
@@ -13,6 +15,9 @@ export const ThirdSkillCarouselSmall2page = forwardRef(
         stopOnInteraction: false,
       }),
     ]);
+
+    const { selectedIndex, scrollSnaps, onDotButtonClick } =
+      useDotButton(emblaApi);
 
     const toggleAutoplay = useCallback(() => {
       const autoplay = emblaApi?.plugins()?.autoplay;
@@ -27,7 +32,10 @@ export const ThirdSkillCarouselSmall2page = forwardRef(
     }));
 
     return (
-      <section className="embla">
+      <Box
+        className="embla"
+        sx={{ display: "flex", flexDirection: { xs: "row", md: "column" } }}
+      >
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__slide">
@@ -38,7 +46,23 @@ export const ThirdSkillCarouselSmall2page = forwardRef(
             </div>
           </div>
         </div>
-      </section>
+        <div className="embla__controls">
+          <Box
+            className="embla__dots"
+            sx={{ flexDirection: { xs: "column", md: "row" } }}
+          >
+            {scrollSnaps.map((_, index) => (
+              <DotButton
+                key={index}
+                onClick={() => onDotButtonClick(index)}
+                className={"embla__dot".concat(
+                  index === selectedIndex ? " embla__dot--selected" : ""
+                )}
+              />
+            ))}
+          </Box>
+        </div>
+      </Box>
     );
   }
 );

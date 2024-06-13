@@ -465,7 +465,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           sx={{
             display: "flex",
             flexDirection: "row",
-            marginBottom: "50px",
+            marginBottom: "100px",
             position: "relative",
           }}
         >
@@ -485,8 +485,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             className="small"
             display={{ xs: "block", lgxl: "none" }}
             position={{ xs: "absolute", lg: "relative" }}
-            height={"380px"}
-            width={"245px"}
+            // height={"380px"}
+            height={{ xs: "380px", md: "413px" }}
+            width={{ xs: "290px", md: "245px" }}
             top={{ xs: "10%", lg: 0 }}
             left={{ xs: "10%", lg: 0 }}
           >
@@ -664,7 +665,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           sx={{
             display: "flex",
             flexDirection: "row",
-            marginBottom: "50px",
+            marginBottom: "100px",
             position: "relative",
           }}
         >
@@ -685,8 +686,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             className="small"
             display={{ xs: "block", lgxl: "none" }}
             position={{ xs: "absolute", lg: "relative" }}
-            height={"380px"}
-            width={"245px"}
+            // height={"380px"}
+            height={{ xs: "380px", md: "413px" }}
+            width={{ xs: "290px", md: "245px" }}
             top={{ xs: "10%", lg: 0 }}
             left={{ xs: "10%", lg: 0 }}
           >
@@ -960,7 +962,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           sx={{
             display: "flex",
             flexDirection: "row",
-            marginBottom: "50px",
+            marginBottom: "100px",
             position: "relative",
           }}
         >
@@ -981,7 +983,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             className="small"
             display={{ xs: "block", lg: "none" }}
             position={"absolute"}
-            height={"372px"}
+            height={"200px"}
             width={"386px"}
             top={{ xs: "20%", md: "60%" }}
             left={{ xs: "50%", xsm: "10%" }}
@@ -1005,7 +1007,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             className="small"
             display={{ xs: "none", lg: "block", xxl: "none" }}
             position={"relative"}
-            height={"372px"}
+            height={"408px"}
             width={"386px"}
           >
             <ThirdSkillCarouselSmall2page
