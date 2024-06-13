@@ -3,7 +3,6 @@ import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
 import { forwardRef, useImperativeHandle, useState } from "react";
 import { DotButton, useDotButton } from "./emblaCarouselDotButton";
-import { Box } from "@mui/material";
 
 export const ThirdSkillCarouselSmall4page = forwardRef(
   ({ First, Second, Third, Fourth }, ref) => {
