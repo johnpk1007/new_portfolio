@@ -366,19 +366,21 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           }}
         />
         <Box
+          data-aos="fade-right"
+          data-aos-once="true"
+          data-aos-delay="700"
           sx={{
             width: { xs: "60%", sm: "70%", md: 450, lg: 500 },
-            height: { xs: 60, md: 250 },
+            height: { xs: "60px", md: "250px" },
             backgroundColor: "black",
             position: "absolute",
-            top: { xs: 0, md: "50%" },
+            top: { xs: 0, md: "calc(50% - 125px)" },
             left: { xs: 0, md: "40px" },
-            // transform: "translate(0%, -50%)",
 
-            transform: {
-              xs: "translate(0%, 0%)",
-              md: "translate(0%, -50%)",
-            },
+            // transform: {
+            //   xs: "translate(0%, 0%)",
+            //   md: "translate(0%, -50%)",
+            // },
 
             display: "flex",
             flexDirection: "column",

@@ -140,7 +140,7 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
                 width: "18px",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                marginRight: "19px",
+                marginRight: "15px",
               }}
             />
             <Typography
