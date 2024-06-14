@@ -12,18 +12,20 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
   <Box
     ref={(fourthRef) => (ref.current[3] = fourthRef)}
     sx={{
-      height: { xs: 1000, md: 800 },
+      // height: { xs: 1000, md: 800 },
+
       width: "100%",
       display: "flex",
       flexDirection: { xs: "column", md: "row" },
       position: "relative",
+      // alignItems: "stretch",
     }}
   >
     <Box
       sx={{
         backgroundImage: `url(${IntroductionImage})`,
-        height: { xs: "70vw", md: "100%" },
-        width: { xs: "100vw", md: "40%" },
+        height: { xs: "70vw", md: "auto" },
+        width: { xs: "100%", md: "40%" },
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -31,7 +33,7 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
 
     <Box
       sx={{
-        height: { xs: "calc(100%-70vw)", md: "100%" },
+        // height: { xs: "calc(100%-70vw)", md: "100%" },
         width: "75%",
         display: "flex",
         flexDirection: "column",
@@ -118,7 +120,11 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
           ? "Completing a project takes precedence and requires discipline—both skills I possess."
           : "프로젝트에 투입되었을 때 저의 모든 관심과 역량을 쏟아붇는 모습을 보게 되실 것을 약속드립니다."}
       </Typography>
-      <Box display={"flex"} flexDirection={{ xs: "column", md: "row" }}>
+      <Box
+        display={"flex"}
+        flexDirection={{ xs: "column", md: "row" }}
+        marginBottom={"50px"}
+      >
         <Box display={"flex"} flexDirection={"column"} marginRight={"30px"}>
           <Box
             display={"flex"}
@@ -213,7 +219,12 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
               i2pss@naver.com
             </Typography>
           </Box>
-          <Box display={"flex"} flexDirection={"row"} alignItems={"center"}>
+          <Box
+            display={"flex"}
+            flexDirection={"row"}
+            alignItems={"center"}
+            marginBottom={"15px"}
+          >
             <Box
               sx={{
                 backgroundImage: `url(${PhoneIcon})`,
