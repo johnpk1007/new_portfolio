@@ -6,7 +6,7 @@ import { DotButton, useDotButton } from "./emblaCarouselDotButton";
 import { Box } from "@mui/material";
 
 export const ThirdSkillCarouselSmall2page = forwardRef(
-  ({ First, Second }, ref) => {
+  ({ First, Second, language }, ref) => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: "auto" }, [
       Autoplay({
         delay: 4000,
@@ -39,10 +39,10 @@ export const ThirdSkillCarouselSmall2page = forwardRef(
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__slide">
-              <First />
+              <First language={language} />
             </div>
             <div className="embla__slide">
-              <Second />
+              <Second language={language} />
             </div>
           </div>
         </div>

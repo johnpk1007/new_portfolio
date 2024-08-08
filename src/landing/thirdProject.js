@@ -2,6 +2,10 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { forwardRef, useEffect } from "react";
 import ProjectImage from "../images/projectImage.webp";
+import apix from "../images/apix.webp";
+import apixPage1 from "../images/apix_page_1.webp";
+import apixPage2 from "../images/apix_page_2.webp";
+import apixPage3 from "../images/apix_page_3.webp";
 import AngServiceImage from "../images/ang_service.webp";
 import AngServicePage1 from "../images/ang_service_page_1.webp";
 import AngServicePage2 from "../images/ang_service_page_2.webp";
@@ -28,240 +32,27 @@ import { ThirdSkillCarouselBig } from "../component/thirdSkillCarouselBig";
 import { ThirdSkillCarouselSmall2page } from "../component/thirdSkillCarouselSmall2page";
 import { ThirdSkillCarouselSmall4page } from "../component/thirdSkillCarouselSmall4page";
 import { useRef } from "react";
+import { Apix, ApixPage1, ApixPage2, ApixPage3 } from "../component/apix";
+import {
+  AngServiceCorpPage1,
+  AngServiceCorpPage2,
+  AngServiceCorpPage3,
+} from "../component/angServiceCorp";
+import {
+  ShimpyoPage1Component,
+  ShimpyoPage2Component,
+  ShimpyoPage3Component,
+} from "../component/shimpyoProject";
+import {
+  FilmviewPage1Component,
+  FilmviewPage2Component,
+  FilmviewPage4_1Component,
+  FilmviewPage4_2Component,
+  FilmviewPage4_3Component,
+  FilmviewPage4_4Component,
+} from "../component/filmview";
 
 const ThirdProject = forwardRef(({ language }, ref) => {
-  const AngServiceCorpPage1 = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Landing page"}
-      Korean={"메인 페이지"}
-      ImageSrc={AngServicePage1}
-      PaperHeight={"98%"}
-      PaperWidth={"100%"}
-      elevation={3}
-    />
-  );
-  const AngServiceCorpPage2 = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Service introduction page"}
-      Korean={"서비스 안내 페이지"}
-      ImageSrc={AngServicePage2}
-      PaperHeight={"98%"}
-      PaperWidth={"100%"}
-      elevation={3}
-    />
-  );
-  const AngServiceCorpPage3 = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Company introduction page"}
-      Korean={"회사 소개 페이지"}
-      ImageSrc={AngServicePage3}
-      PaperHeight={"98%"}
-      PaperWidth={"100%"}
-      elevation={3}
-    />
-  );
-
-  const ShimpyoPage1Component = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Landing page"}
-      Korean={"메인 페이지"}
-      ImageSrc={ShimpyoPage1}
-      PaperHeight={"98%"}
-      PaperWidth={"100%"}
-      elevation={3}
-    />
-  );
-
-  const ShimpyoPage2Component = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Hotel introduction page"}
-      Korean={"숙소 안내 페이지"}
-      ImageSrc={ShimpyoPage2}
-      PaperHeight={"98%"}
-      PaperWidth={"100%"}
-      elevation={3}
-    />
-  );
-
-  const ShimpyoPage3Component = () => (
-    <Box display={"flex"} flexDirection={"row"}>
-      <Box>
-        <ProjectImageComponent
-          language={language}
-          English={"Booking date search module"}
-          Korean={"예약 날짜 검색 모듈"}
-          ImageSrc={ShimpyoCalendarModule}
-          PaperHeight={"122px"}
-          PaperWidth={"157px"}
-          MarginRight={"10px"}
-          FontSize={14}
-        />
-        <Box
-          display={"flex"}
-          flexDirection={"row"}
-          justifyContent={"flex-start"}
-          marginTop={"10px"}
-        >
-          <ProjectImageComponent
-            language={language}
-            English={"Booking date confirmation module"}
-            Korean={"예약 날짜 확인 모듈"}
-            ImageSrc={ShimpyoBookingMdodule}
-            PaperHeight={"182px"}
-            PaperWidth={"74px"}
-            MarginRight={"10px"}
-            FontSize={12}
-          />
-          <ProjectImageComponent
-            language={language}
-            English={"Booking guest check module"}
-            Korean={"예약 게스트 확인 모듈"}
-            ImageSrc={ShimpyoGuestModule}
-            PaperHeight={"152px"}
-            PaperWidth={"74px"}
-            MarginRight={"10px"}
-            FontSize={12}
-          />
-        </Box>
-      </Box>
-      <Box>
-        <ProjectImageComponent
-          language={language}
-          English={"Unregisted user payment module"}
-          Korean={"비회원 결제 모듈"}
-          ImageSrc={ShimpyoBookingUnregisteredModule}
-          PaperHeight={"79px"}
-          PaperWidth={"67px"}
-          MarginBottom={"10px"}
-          FontSize={12}
-        />
-        <ProjectImageComponent
-          language={language}
-          English={"Booking final confirmation module"}
-          Korean={"예약 최종 확인 모듈"}
-          ImageSrc={ShimpyoConfirmationModule}
-          PaperHeight={"80px"}
-          PaperWidth={"67px"}
-          MarginBottom={"10px"}
-          FontSize={12}
-        />
-        <ProjectImageComponent
-          language={language}
-          English={"Kakao payment module"}
-          Korean={"카카오 페이 모듈"}
-          ImageSrc={ShimpyoPaymentModule}
-          PaperHeight={"87px"}
-          PaperWidth={"67px"}
-          MarginBottom={"10px"}
-          FontSize={12}
-        />
-      </Box>
-    </Box>
-  );
-
-  const FilmviewPage1Component = () => (
-    <Box>
-      <ProjectImageComponent
-        language={language}
-        English={"Landing page"}
-        Korean={"메인 페이지"}
-        ImageSrc={FilmviewPage1}
-        PaperHeight={"175px"}
-        PaperWidth={"370px"}
-        MarginBottom={"20px"}
-        MarginRight={"0px"}
-        BackgroundPosition={"top"}
-      />
-      <ProjectImageComponent
-        language={language}
-        English={"Account delete page"}
-        Korean={"계정 삭제 페이지"}
-        ImageSrc={FilmviewPage2}
-        PaperHeight={"175px"}
-        PaperWidth={"370px"}
-        MarginRight={"0px"}
-        BackgroundPosition={"top"}
-      />
-    </Box>
-  );
-
-  const FilmviewPage2Component = () => (
-    <Box>
-      <ProjectImageComponent
-        language={language}
-        English={"Writing new movie review page"}
-        Korean={"영화 리뷰 작성 페이지"}
-        ImageSrc={FilmviewPage4}
-        PaperHeight={"175px"}
-        PaperWidth={"370px"}
-        MarginBottom={"20px"}
-        BackgroundPosition={"top"}
-      />
-      <ProjectImageComponent
-        language={language}
-        English={"Movie review page"}
-        Korean={"영화 리뷰 페이지"}
-        ImageSrc={FilmviewPage3}
-        PaperHeight={"175px"}
-        PaperWidth={"370px"}
-        BackgroundPosition={"top"}
-      />
-    </Box>
-  );
-
-  const FilmviewPage4_1Component = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Landing page"}
-      Korean={"메인 페이지"}
-      ImageSrc={FilmviewPage1}
-      PaperHeight={"175px"}
-      PaperWidth={"370px"}
-      BackgroundPosition={"top"}
-    />
-  );
-
-  const FilmviewPage4_2Component = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Account delete page"}
-      Korean={"계정 삭제 페이지"}
-      ImageSrc={FilmviewPage2}
-      PaperHeight={"175px"}
-      PaperWidth={"370px"}
-      BackgroundPosition={"top"}
-    />
-  );
-
-  const FilmviewPage4_3Component = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Writing new movie review page"}
-      Korean={"영화 리뷰 작성 페이지"}
-      ImageSrc={FilmviewPage4}
-      PaperHeight={"175px"}
-      PaperWidth={"370px"}
-      BackgroundPosition={"top"}
-    />
-  );
-
-  const FilmviewPage4_4Component = () => (
-    <ProjectImageComponent
-      language={language}
-      English={"Movie review page"}
-      Korean={"영화 리뷰 페이지"}
-      ImageSrc={FilmviewPage3}
-      PaperHeight={"175px"}
-      PaperWidth={"370px"}
-      BackgroundPosition={"top"}
-    />
-  );
-
   const childrenRef = useRef([null, null, null, null, null, null]);
   const triggerChildrenSmallFunction0 = () => {
     if (childrenRef.current[0]) childrenRef.current[0].toggleAutoplay();
@@ -422,13 +213,21 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           <Box
             borderRight={"solid black 1px"}
             paddingRight={"20px"}
-            height={{ xs: 40, md: 80 }}
+            height={{ xs: 50, md: 100 }}
             sx={{
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
             }}
           >
+            <Typography
+              fontFamily={"Playfair Display"}
+              fontSize={{ xs: 11, md: 22 }}
+              textAlign={"right"}
+              color={"black"}
+            >
+              API X API
+            </Typography>
             <Typography
               fontFamily={"Playfair Display"}
               fontSize={{ xs: 11, md: 22 }}
@@ -458,6 +257,206 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       </Box>
 
       <Box
+        // ref={(firstProject) => (projectRefs.current[0] = firstProject)}
+        sx={{
+          marginBottom: "110px",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            marginBottom: "100px",
+            position: "relative",
+          }}
+        >
+          <ProjectImageComponent
+            language={language}
+            English={"July 2024 - August 2024"}
+            Korean={"2024.07 - 2024.08"}
+            ImageSrc={apix}
+            PaperHeight={{ xs: "30vw", md: "372px" }}
+            PaperWidth={{ xs: "100vw", md: "780px" }}
+            FontSize={30}
+            main={true}
+            MarginRight={{ xs: 0, md: "25px" }}
+          />
+
+          <Box
+            className="small"
+            display={{ xs: "block", lgxl: "none" }}
+            position={{ xs: "absolute", lg: "relative" }}
+            // height={"380px"}
+            height={{ xs: "380px", md: "413px" }}
+            width={{ xs: "290px", md: "245px" }}
+            top={{ xs: "10%", lg: 0 }}
+            left={{ xs: "10%", lg: 0 }}
+          >
+            <ThirdSkillCarouselSmall
+              ref={(el) => (childrenRef.current[0] = el)}
+              First={ApixPage1}
+              Second={ApixPage2}
+              Third={ApixPage3}
+              language={language}
+            />
+          </Box>
+
+          <Box
+            className="big"
+            display={{ xs: "none", lgxl: "block", xxl: "none" }}
+            height={"380px"}
+            width={"500px"}
+          >
+            <ThirdSkillCarouselBig
+              ref={(el) => (childrenRef.current[3] = el)}
+              First={ApixPage1}
+              Second={ApixPage2}
+              Third={ApixPage3}
+              language={language}
+            />
+          </Box>
+          <ProjectImageComponent
+            language={language}
+            English={"Landing page"}
+            Korean={"메인 페이지"}
+            ImageSrc={apixPage1}
+            PaperHeight={"372px"}
+            PaperWidth={"245px"}
+            sizeProp="xxl"
+          />
+          <ProjectImageComponent
+            language={language}
+            English={"Artist page"}
+            Korean={"아티스트 페이지"}
+            ImageSrc={apixPage2}
+            PaperHeight={"372px"}
+            PaperWidth={"245px"}
+            sizeProp="xxl"
+          />
+          <ProjectImageComponent
+            language={language}
+            English={"Artist page"}
+            Korean={"아티스트 페이지"}
+            ImageSrc={apixPage3}
+            PaperHeight={"372px"}
+            PaperWidth={"245px"}
+            sizeProp="xxl"
+          />
+        </Box>
+        <Box
+          marginLeft={{ xs: "50px", md: 0 }}
+          paddingRight={{ xs: "50px", md: 0 }}
+        >
+          <Box marginBottom={{ xs: "25px", md: "120px" }}>
+            <Typography
+              fontFamily={"Playfair Display"}
+              fontSize={{ xs: 20, md: 32 }}
+              marginBottom={"20px"}
+            >
+              API X API
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
+            >
+              {language
+                ? "It is a sandbox project using Youtube api and Billboard."
+                : "유튜브 api와 빌보드를 이용한 토이 프로젝트 입니다."}
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
+              marginBottom={"20px"}
+            >
+              {language
+                ? "For this dynamic site, I designed and developed both the front-end and back-end, \nand handled the deployment independently."
+                : "동적 웹사이트로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다."}
+            </Typography>
+            <Box sx={{ display: "flex", flexDirection: "row" }}>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Figma
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Next.js
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Tailwind CSS
+              </Typography>
+            </Box>
+          </Box>
+          <Box sx={{ display: "inline-flex", flexDirection: "column" }}>
+            <Link
+              href="https://github.com/johnpk1007/apix"
+              underline="none"
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              color={"black"}
+              display={"inline-flex"}
+              alignItems={"center"}
+              target="_blank"
+              rel="noopener"
+            >
+              {language ? "View source code" : "소스코드 확인"}
+              <Box
+                sx={{
+                  marginLeft: "5px",
+                  backgroundImage: `url(${LinkIcon})`,
+                  height: "15px",
+                  width: "15px",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Link>
+            <Link
+              href="https://www.apixapi.xyz/"
+              underline="none"
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              color={"black"}
+              display={"inline-flex"}
+              alignItems={"center"}
+              target="_blank"
+              rel="noopener"
+            >
+              {language ? "Visit apixapi.xyz " : "apixapi.xyz 접속"}
+              <Box
+                sx={{
+                  marginLeft: "5px",
+                  backgroundImage: `url(${LinkIcon})`,
+                  height: "15px",
+                  width: "15px",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Link>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box
         ref={(firstProject) => (projectRefs.current[0] = firstProject)}
         sx={{
           marginBottom: "110px",
@@ -473,8 +472,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
         >
           <ProjectImageComponent
             language={language}
-            English={"February. 2024 - April. 2024"}
-            Korean={"2024.02 - 2020.04"}
+            English={"February 2024 - April 2024"}
+            Korean={"2024.02 - 2024.04"}
             ImageSrc={AngServiceImage}
             PaperHeight={{ xs: "30vw", md: "372px" }}
             PaperWidth={{ xs: "100vw", md: "780px" }}
@@ -498,6 +497,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               First={AngServiceCorpPage1}
               Second={AngServiceCorpPage2}
               Third={AngServiceCorpPage3}
+              language={language}
             />
           </Box>
 
@@ -512,6 +512,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               First={AngServiceCorpPage1}
               Second={AngServiceCorpPage2}
               Third={AngServiceCorpPage3}
+              language={language}
             />
           </Box>
           <ProjectImageComponent
@@ -572,7 +573,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               marginBottom={"20px"}
             >
               {language
-                ? "It is a static site that I designed, \ndeveloped the front end for, and deployed independently."
+                ? "It is a static site that I designed, \ndeveloped the front-end for, and deployed independently."
                 : "정적 웹사이트로서 디자인, 프론트 엔드 개발, 배포를 혼자 담당하였습니다."}
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "row" }}>
@@ -699,6 +700,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               First={ShimpyoPage1Component}
               Second={ShimpyoPage2Component}
               Third={ShimpyoPage3Component}
+              language={language}
             />
           </Box>
 
@@ -713,6 +715,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               First={ShimpyoPage1Component}
               Second={ShimpyoPage2Component}
               Third={ShimpyoPage3Component}
+              language={language}
             />
           </Box>
 
@@ -838,7 +841,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               whiteSpace={{ xs: "pre-line", lg: "normal" }}
             >
               {language
-                ? "I was responsible for developing the front end of the landing page, \nhotel page, and payment system."
+                ? "I was responsible for developing the front-end of the landing page, \nhotel page, and payment system."
                 : "저는 메인 페이지, 숙소 페이지, 결제 시스템 등을 담당하여 구현하였습니다. "}
             </Typography>
             <Typography
@@ -874,7 +877,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 fontWeight={200}
                 marginRight={"25px"}
               >
-                ▪️ Typescript
+                ▪️ TypeScript
               </Typography>
               <Typography
                 fontFamily={"Noto Sans KR"}
@@ -970,7 +973,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
         >
           <ProjectImageComponent
             language={language}
-            English={"November. 2022 - May. 2023"}
+            English={"November 2022 - May 2023"}
             Korean={"2022.11 - 2023.05"}
             ImageSrc={FilmviewImage}
             PaperHeight={{ xs: "30vw", md: "372px" }}
@@ -1002,6 +1005,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               Second={FilmviewPage4_2Component}
               Third={FilmviewPage4_3Component}
               Fourth={FilmviewPage4_4Component}
+              language={language}
             />
           </Box>
 
@@ -1016,6 +1020,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               ref={(el) => (childrenRef.current[5] = el)}
               First={FilmviewPage1Component}
               Second={FilmviewPage2Component}
+              language={language}
             />
           </Box>
 
@@ -1096,7 +1101,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               whiteSpace={{ xs: "pre-line", lg: "normal" }}
             >
               {language
-                ? "For this dynamic site, I designed and developed both the front end and back end, \nand handled the deployment independently."
+                ? "For this dynamic site, I designed and developed both the front-end and back-end, \nand handled the deployment independently."
                 : "동적 웹사이트로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다."}
             </Typography>
             <Typography

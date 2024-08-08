@@ -184,7 +184,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontWeight={200}
             color={"#616161"}
           >
-            HTML, CSS, Javascript
+            HTML, CSS, JavaScript
           </Typography>
         </Box>
         <Box>
@@ -201,7 +201,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontWeight={200}
             color={"#616161"}
           >
-            React, MUI
+            React, Next.js, TypeScript, Tailwind CSS, Redux, MUI
           </Typography>
         </Box>
         <Box>
@@ -244,7 +244,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontSize={{ xs: 20, md: 26, xl: 32 }}
             fontWeight={300}
           >
-            Collabration
+            Collaboration
           </Typography>
           <Typography
             fontFamily={"Karla"}

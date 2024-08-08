@@ -5,7 +5,7 @@ import { forwardRef, useImperativeHandle, useState } from "react";
 import { DotButton, useDotButton } from "./emblaCarouselDotButton";
 
 export const ThirdSkillCarouselBig = forwardRef(
-  ({ First, Second, Third }, ref) => {
+  ({ First, Second, Third, language }, ref) => {
     const [played, setPlayed] = useState(false);
     const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: "auto" }, [
       Autoplay({ stopOnLastSnap: true, playOnInit: false }),
@@ -34,13 +34,13 @@ export const ThirdSkillCarouselBig = forwardRef(
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__slide">
-              <First />
+              <First language={language} />
             </div>
             <div className="embla__slide">
-              <Second />
+              <Second language={language} />
             </div>
             <div className="embla__slide">
-              <Third />
+              <Third language={language} />
             </div>
           </div>
         </div>
