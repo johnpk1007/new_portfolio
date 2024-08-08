@@ -32,7 +32,7 @@ import { ThirdSkillCarouselBig } from "../component/thirdSkillCarouselBig";
 import { ThirdSkillCarouselSmall2page } from "../component/thirdSkillCarouselSmall2page";
 import { ThirdSkillCarouselSmall4page } from "../component/thirdSkillCarouselSmall4page";
 import { useRef } from "react";
-import { Apix, ApixPage1, ApixPage2, ApixPage3 } from "../component/apix";
+import { ApixPage1, ApixPage2, ApixPage3 } from "../component/apix";
 import {
   AngServiceCorpPage1,
   AngServiceCorpPage2,
