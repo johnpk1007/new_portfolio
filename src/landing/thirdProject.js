@@ -371,8 +371,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               whiteSpace={{ xs: "pre-line", lg: "normal" }}
             >
               {language
-                ? "It is a sandbox project using Youtube api and Billboard."
-                : "유튜브 api와 빌보드를 이용한 토이 프로젝트 입니다."}
+                ? "It is a sandbox project using Youtube API and Billboard."
+                : "유튜브 API와 빌보드를 이용한 토이 프로젝트 입니다."}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
