@@ -53,7 +53,7 @@ import {
 } from "../component/filmview";
 
 const ThirdProject = forwardRef(({ language }, ref) => {
-  const childrenRef = useRef([null, null, null, null, null, null]);
+  const childrenRef = useRef([null, null, null, null, null, null, null, null]);
   const triggerChildrenSmallFunction0 = () => {
     if (childrenRef.current[0]) childrenRef.current[0].toggleAutoplay();
   };
@@ -72,8 +72,14 @@ const ThirdProject = forwardRef(({ language }, ref) => {
   const triggerChildrenSmallFunction5 = () => {
     if (childrenRef.current[5]) childrenRef.current[5].toggleAutoplay();
   };
+  const triggerChildrenSmallFunction6 = () => {
+    if (childrenRef.current[6]) childrenRef.current[6].toggleAutoplay();
+  };
+  const triggerChildrenSmallFunction7 = () => {
+    if (childrenRef.current[7]) childrenRef.current[7].toggleAutoplay();
+  };
 
-  const projectRefs = useRef([null, null, null]);
+  const projectRefs = useRef([null, null, null, null]);
 
   useEffect(() => {
     const observerCallback = (entries, observer) => {
@@ -82,13 +88,16 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           const index = projectRefs.current.indexOf(entry.target);
           if (index === 0) {
             triggerChildrenSmallFunction0();
-            triggerChildrenSmallFunction3();
+            triggerChildrenSmallFunction4();
           } else if (index === 1) {
             triggerChildrenSmallFunction1();
-            triggerChildrenSmallFunction4();
+            triggerChildrenSmallFunction5();
           } else if (index === 2) {
             triggerChildrenSmallFunction2();
-            triggerChildrenSmallFunction5();
+            triggerChildrenSmallFunction6();
+          } else if (index === 3) {
+            triggerChildrenSmallFunction3();
+            triggerChildrenSmallFunction7();
           }
         }
       });
@@ -257,7 +266,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       </Box>
 
       <Box
-        // ref={(firstProject) => (projectRefs.current[0] = firstProject)}
+        ref={(firstProject) => (projectRefs.current[0] = firstProject)}
         sx={{
           marginBottom: "110px",
         }}
@@ -308,7 +317,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             width={"500px"}
           >
             <ThirdSkillCarouselBig
-              ref={(el) => (childrenRef.current[3] = el)}
+              ref={(el) => (childrenRef.current[4] = el)}
               First={ApixPage1}
               Second={ApixPage2}
               Third={ApixPage3}
@@ -457,7 +466,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       </Box>
 
       <Box
-        ref={(firstProject) => (projectRefs.current[0] = firstProject)}
+        ref={(secondProject) => (projectRefs.current[1] = secondProject)}
         sx={{
           marginBottom: "110px",
         }}
@@ -493,7 +502,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             left={{ xs: "10%", lg: 0 }}
           >
             <ThirdSkillCarouselSmall
-              ref={(el) => (childrenRef.current[0] = el)}
+              ref={(el) => (childrenRef.current[1] = el)}
               First={AngServiceCorpPage1}
               Second={AngServiceCorpPage2}
               Third={AngServiceCorpPage3}
@@ -508,7 +517,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             width={"500px"}
           >
             <ThirdSkillCarouselBig
-              ref={(el) => (childrenRef.current[3] = el)}
+              ref={(el) => (childrenRef.current[5] = el)}
               First={AngServiceCorpPage1}
               Second={AngServiceCorpPage2}
               Third={AngServiceCorpPage3}
@@ -659,7 +668,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       </Box>
 
       <Box
-        ref={(secondProject) => (projectRefs.current[1] = secondProject)}
+        ref={(thirdProject) => (projectRefs.current[2] = thirdProject)}
         sx={{
           marginBottom: "110px",
         }}
@@ -696,7 +705,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             left={{ xs: "10%", lg: 0 }}
           >
             <ThirdSkillCarouselSmall
-              ref={(el) => (childrenRef.current[1] = el)}
+              ref={(el) => (childrenRef.current[2] = el)}
               First={ShimpyoPage1Component}
               Second={ShimpyoPage2Component}
               Third={ShimpyoPage3Component}
@@ -711,7 +720,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             width={"500px"}
           >
             <ThirdSkillCarouselBig
-              ref={(el) => (childrenRef.current[4] = el)}
+              ref={(el) => (childrenRef.current[6] = el)}
               First={ShimpyoPage1Component}
               Second={ShimpyoPage2Component}
               Third={ShimpyoPage3Component}
@@ -960,7 +969,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       </Box>
 
       <Box
-        ref={(thirdProject) => (projectRefs.current[2] = thirdProject)}
+        ref={(fourthProject) => (projectRefs.current[3] = fourthProject)}
         sx={{ marginBottom: "110px" }}
       >
         <Box
@@ -1000,7 +1009,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             }}
           >
             <ThirdSkillCarouselSmall4page
-              ref={(el) => (childrenRef.current[2] = el)}
+              ref={(el) => (childrenRef.current[3] = el)}
               First={FilmviewPage4_1Component}
               Second={FilmviewPage4_2Component}
               Third={FilmviewPage4_3Component}
@@ -1017,7 +1026,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             width={"386px"}
           >
             <ThirdSkillCarouselSmall2page
-              ref={(el) => (childrenRef.current[5] = el)}
+              ref={(el) => (childrenRef.current[7] = el)}
               First={FilmviewPage1Component}
               Second={FilmviewPage2Component}
               language={language}
