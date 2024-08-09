@@ -385,7 +385,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 ? "For this dynamic site, I designed and developed both the front-end and back-end, \nand handled the deployment independently."
                 : "동적 웹사이트로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다."}
             </Typography>
-            <Box sx={{ display: "flex", flexDirection: "row" }}>
+            <Box
+              sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+            >
               <Typography
                 fontFamily={"Noto Sans KR"}
                 fontSize={14}
