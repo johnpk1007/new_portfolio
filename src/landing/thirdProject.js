@@ -354,7 +354,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           marginLeft={{ xs: "50px", md: 0 }}
           paddingRight={{ xs: "50px", md: 0 }}
         >
-          <Box marginBottom={{ xs: "25px", md: "120px" }}>
+          <Box marginBottom={{ xs: "25px", md: "60px" }}>
             <Typography
               fontFamily={"Playfair Display"}
               fontSize={{ xs: 20, md: 32 }}
@@ -447,12 +447,17 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: "inline-flex", flexDirection: "column" }}>
+          <Box
+            sx={{
+              display: "inline-flex",
+              flexDirection: "column",
+            }}
+          >
             <Link
               href="https://github.com/johnpk1007/apix"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -467,18 +472,18 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
               />
-            </Link>{" "}
+            </Link>
             <Link
               href="https://github.com/johnpk1007/apix-mobile"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -493,8 +498,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -504,7 +509,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://www.apixapi.xyz/"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -517,8 +522,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -528,7 +533,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://hyunjunportfolio.xyz/apixapi.apk"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -536,25 +541,23 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               target="_blank"
               rel="noopener"
             >
-              {language
-                ? "Download Android mobile application "
-                : "안드로이드 앱 다운로드"}
+              {language ? "Download APK file " : "APK 파일 다운로드"}
               <Box
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
               />
             </Link>
             <Link
-              href="https://expo.dev/preview/update?message=API%20X%20API&updateRuntimeVersion=1.0.0&createdAt=2024-08-29T05%3A28%3A02.570Z&slug=exp&projectId=09101d5c-5d3b-4e85-93d4-85b0b210e44d&group=ebc12455-5826-4c99-b9ea-b245b3e0c886"
+              href="https://expo.dev/preview/update?message=API%20X%20API&updateRuntimeVersion=1.0.0&createdAt=2024-08-30T05%3A22%3A58.770Z&slug=exp&projectId=09101d5c-5d3b-4e85-93d4-85b0b210e44d&group=c49900a2-b54b-462f-bf2c-a5f26551964a"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -563,14 +566,14 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               rel="noopener"
             >
               {language
-                ? "Access EXPO link to use iOS mobile application"
-                : "iOS 앱을 위한 EXPO 링크 접속"}
+                ? "Access EXPO link for Android & iOS"
+                : "Android & iOS를 위한 EXPO 링크 접속"}
               <Box
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -671,7 +674,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           marginLeft={{ xs: "50px", md: 0 }}
           paddingRight={{ xs: "50px", md: 0 }}
         >
-          <Box marginBottom={{ xs: "25px", md: "120px" }}>
+          <Box marginBottom={{ xs: "25px", md: "60px" }}>
             <Typography
               fontFamily={"Playfair Display"}
               fontSize={{ xs: 20, md: 32 }}
@@ -732,7 +735,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://github.com/johnpk1007/arc-services-corp"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -745,8 +748,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -756,7 +759,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://angservicescorp.com/"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -771,8 +774,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -939,7 +942,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           marginLeft={{ xs: "50px", md: 0 }}
           paddingRight={{ xs: "50px", md: 0 }}
         >
-          <Box marginBottom={{ xs: "25px", md: "120px" }}>
+          <Box marginBottom={{ xs: "25px", md: "60px" }}>
             <Typography
               fontFamily={"Playfair Display"}
               fontSize={{ xs: 20, md: 32 }}
@@ -1033,7 +1036,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://github.com/Project-Shimpyo/front"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -1046,8 +1049,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -1057,7 +1060,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://www.youtube.com/watch?v=RbrhiM4ybgI"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -1072,8 +1075,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -1200,7 +1203,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
           marginLeft={{ xs: "50px", md: 0 }}
           paddingRight={{ xs: "50px", md: 0 }}
         >
-          <Box marginBottom={"120px"}>
+          <Box marginBottom={{ xs: "25px", md: "60px" }}>
             <Typography
               fontFamily={"Playfair Display"}
               fontSize={{ xs: 20, md: 32 }}
@@ -1303,7 +1306,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://github.com/johnpk1007/movie_project"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -1316,8 +1319,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -1327,7 +1330,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               href="https://filmview.xyz/"
               underline="none"
               fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
+              fontSize={{ xs: 14, md: 18 }}
               fontWeight={200}
               color={"black"}
               display={"inline-flex"}
@@ -1340,8 +1343,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                 sx={{
                   marginLeft: "5px",
                   backgroundImage: `url(${LinkIcon})`,
-                  height: "15px",
-                  width: "15px",
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
