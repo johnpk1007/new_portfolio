@@ -12,13 +12,10 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
   <Box
     ref={(fourthRef) => (ref.current[3] = fourthRef)}
     sx={{
-      // height: { xs: 1000, md: 800 },
-
       width: "100%",
       display: "flex",
       flexDirection: { xs: "column", md: "row" },
       position: "relative",
-      // alignItems: "stretch",
     }}
   >
     <Box
@@ -33,7 +30,6 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
 
     <Box
       sx={{
-        // height: { xs: "calc(100%-70vw)", md: "100%" },
         width: "75%",
         display: "flex",
         flexDirection: "column",
