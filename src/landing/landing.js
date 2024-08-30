@@ -6,9 +6,19 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Buttons from "../component/button";
 import { Box } from "@mui/material";
 import { useState, useRef, useEffect } from "react";
+import GlobalProvider from "../component/globalProvider";
 
 export default function Landing() {
-  const languageInfo = window.navigator.language === "ko-KR" ? false : true;
+  const localStorageLanguage = localStorage.getItem("language");
+  console.log("localStorageLanguage:", typeof localStorageLanguage);
+  const languageInfo =
+    localStorageLanguage === null
+      ? window.navigator.language === "ko-KR"
+        ? false
+        : true
+      : localStorageLanguage === "true"
+      ? true
+      : false;
   const [language, setLanguage] = useState(languageInfo);
   const [selectedValue, setSelectedValue] = useState("first");
   const refs = useRef([null, null, null, null]);
@@ -66,20 +76,22 @@ export default function Landing() {
 
   return (
     <>
-      <CssBaseline />
-      <Box sx={{ position: "relative" }}>
-        <Buttons
-          language={language}
-          setLanguage={setLanguage}
-          selectedValue={selectedValue}
-          setSelectedValue={setSelectedValue}
-          scrollToRef={scrollToRef}
-        />
-        <FirstImage language={language} ref={refs} />
-        <SecondSkill language={language} ref={refs} />
-        <ThirdProject language={language} ref={refs} />
-        <FourthIntroduction language={language} ref={refs} />
-      </Box>
+      <GlobalProvider>
+        <CssBaseline />
+        <Box sx={{ position: "relative" }}>
+          <Buttons
+            language={language}
+            setLanguage={setLanguage}
+            selectedValue={selectedValue}
+            setSelectedValue={setSelectedValue}
+            scrollToRef={scrollToRef}
+          />
+          <FirstImage language={language} ref={refs} />
+          <SecondSkill language={language} ref={refs} />
+          <ThirdProject language={language} ref={refs} />
+          <FourthIntroduction language={language} ref={refs} />
+        </Box>
+      </GlobalProvider>
     </>
   );
 }

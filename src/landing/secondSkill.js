@@ -201,7 +201,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontWeight={200}
             color={"#616161"}
           >
-            React, Next.js, TypeScript, Tailwind CSS, Redux, MUI
+            React, Next.js, TypeScript, Tailwind CSS, Redux, MUI, React Native
           </Typography>
         </Box>
         <Box>
@@ -235,7 +235,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontWeight={200}
             color={"#616161"}
           >
-            Node.js, Redis
+            Node.js, Redis, Express
           </Typography>
         </Box>
         <Box>

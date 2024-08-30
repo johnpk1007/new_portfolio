@@ -27,6 +27,7 @@ import FilmviewPage4 from "../images/filmview_page_4.webp";
 import LinkIcon from "../images/link_icon.png";
 import Link from "@mui/material/Link";
 import ProjectImageComponent from "../component/projectImage";
+import HoverProjectImageComponent from "../component/hoverProjectImage";
 import { ThirdSkillCarouselSmall } from "../component/thirdSkillCarouselSmall";
 import { ThirdSkillCarouselBig } from "../component/thirdSkillCarouselBig";
 import { ThirdSkillCarouselSmall2page } from "../component/thirdSkillCarouselSmall2page";
@@ -51,6 +52,7 @@ import {
   FilmviewPage4_3Component,
   FilmviewPage4_4Component,
 } from "../component/filmview";
+import { useTheme, useMediaQuery } from "@mui/material";
 
 const ThirdProject = forwardRef(({ language }, ref) => {
   const childrenRef = useRef([null, null, null, null, null, null, null, null]);
@@ -131,6 +133,9 @@ const ThirdProject = forwardRef(({ language }, ref) => {
     };
   }, []);
 
+  const theme = useTheme();
+  const isAboveBreakpoint = useMediaQuery(theme.breakpoints.up("xxl"));
+
   return (
     <Box
       ref={(thirdRef) => (ref.current[2] = thirdRef)}
@@ -176,11 +181,6 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             position: "absolute",
             top: { xs: 0, md: "calc(50% - 125px)" },
             left: { xs: 0, md: "40px" },
-
-            // transform: {
-            //   xs: "translate(0%, 0%)",
-            //   md: "translate(0%, -50%)",
-            // },
 
             display: "flex",
             flexDirection: "column",
@@ -342,15 +342,13 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             PaperWidth={"245px"}
             sizeProp="xxl"
           />
-          <ProjectImageComponent
-            language={language}
-            English={"Artist page"}
-            Korean={"아티스트 페이지"}
-            ImageSrc={apixPage3}
-            PaperHeight={"372px"}
-            PaperWidth={"245px"}
-            sizeProp="xxl"
-          />
+          <Box
+            width={"245px"}
+            height={"372px"}
+            display={isAboveBreakpoint ? "block" : "none"}
+          >
+            <ApixPage3 language={language} />
+          </Box>
         </Box>
         <Box
           marginLeft={{ xs: "50px", md: 0 }}
@@ -379,11 +377,30 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               fontSize={{ xs: 14, md: 20 }}
               fontWeight={200}
               whiteSpace={{ xs: "pre-line", lg: "normal" }}
+            >
+              {language
+                ? "For this dynamic site and mobile application,"
+                : "동적 웹사이트와 모바일 앱으로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다."}
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
+            >
+              {language &&
+                "I designed and developed both the front-end and back-end, \nand handled the deployment independently."}
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
               marginBottom={"20px"}
             >
               {language
-                ? "For this dynamic site, I designed and developed both the front-end and back-end, \nand handled the deployment independently."
-                : "동적 웹사이트로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다."}
+                ? "It updates automatically when the Billboard chart is updated."
+                : "빌보드 차트의 업데이트에 맞춰 자동으로 업데이트됩니다."}
             </Typography>
             <Box
               sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
@@ -412,6 +429,22 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               >
                 ▪️ Tailwind CSS
               </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Express
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ React Native
+              </Typography>
             </Box>
           </Box>
           <Box sx={{ display: "inline-flex", flexDirection: "column" }}>
@@ -427,7 +460,35 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               target="_blank"
               rel="noopener"
             >
-              {language ? "View source code" : "소스코드 확인"}
+              {language
+                ? "View source code of the website"
+                : "웹사이트 소스코드 확인"}
+              <Box
+                sx={{
+                  marginLeft: "5px",
+                  backgroundImage: `url(${LinkIcon})`,
+                  height: "15px",
+                  width: "15px",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Link>{" "}
+            <Link
+              href="https://github.com/johnpk1007/apix-mobile"
+              underline="none"
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              color={"black"}
+              display={"inline-flex"}
+              alignItems={"center"}
+              target="_blank"
+              rel="noopener"
+            >
+              {language
+                ? "View source code of the mobile application"
+                : "모바일 앱 소스코드 확인"}
               <Box
                 sx={{
                   marginLeft: "5px",
@@ -452,6 +513,58 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               rel="noopener"
             >
               {language ? "Visit apixapi.xyz " : "apixapi.xyz 접속"}
+              <Box
+                sx={{
+                  marginLeft: "5px",
+                  backgroundImage: `url(${LinkIcon})`,
+                  height: "15px",
+                  width: "15px",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Link>
+            <Link
+              href="https://hyunjunportfolio.xyz/apixapi.apk"
+              underline="none"
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              color={"black"}
+              display={"inline-flex"}
+              alignItems={"center"}
+              target="_blank"
+              rel="noopener"
+            >
+              {language
+                ? "Download Android mobile application "
+                : "안드로이드 앱 다운로드"}
+              <Box
+                sx={{
+                  marginLeft: "5px",
+                  backgroundImage: `url(${LinkIcon})`,
+                  height: "15px",
+                  width: "15px",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Link>
+            <Link
+              href="https://expo.dev/preview/update?message=API%20X%20API&updateRuntimeVersion=1.0.0&createdAt=2024-08-29T05%3A28%3A02.570Z&slug=exp&projectId=09101d5c-5d3b-4e85-93d4-85b0b210e44d&group=ebc12455-5826-4c99-b9ea-b245b3e0c886"
+              underline="none"
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              color={"black"}
+              display={"inline-flex"}
+              alignItems={"center"}
+              target="_blank"
+              rel="noopener"
+            >
+              {language
+                ? "Access EXPO link to use iOS mobile application"
+                : "iOS 앱을 위한 EXPO 링크 접속"}
               <Box
                 sx={{
                   marginLeft: "5px",

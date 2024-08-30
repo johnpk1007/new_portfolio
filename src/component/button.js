@@ -17,6 +17,8 @@ export default function Buttons({
 
   const handleClickEvent = () => {
     setLanguage((language) => !language);
+    console.log("language:", !language);
+    localStorage.setItem("language", !language);
   };
 
   const controlProps = (item) => ({

@@ -15,6 +15,11 @@ export default function ProjectImage({
   elevation = 3,
   main = false,
   exception = false,
+  position = "relative",
+  top = "auto",
+  left = "auto",
+  right = "auto",
+  zIndex = 0,
 }) {
   const theme = useTheme();
   const isAboveBreakpoint = useMediaQuery(theme.breakpoints.up(sizeProp));
@@ -39,7 +44,10 @@ export default function ProjectImage({
             : 0
           : MarginBottom,
         overflow: "hidden",
-        position: "relative",
+        position: position,
+        top: top,
+        left: left,
+        right: right,
         display: isAboveBreakpoint ? "block" : "none",
         "&:hover .background-image": isBelowBreakpointAndStop
           ? {}
@@ -49,6 +57,7 @@ export default function ProjectImage({
           : {
               opacity: 1,
             },
+        zIndex: zIndex,
       }}
     >
       <Box
