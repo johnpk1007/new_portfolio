@@ -212,7 +212,7 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
               fontWeight={200}
               color={"#616161"}
             >
-              i2pss@naver.com
+              johnpk1007@gmail.com
             </Typography>
           </Box>
           <Box
@@ -241,7 +241,7 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
               fontWeight={200}
               color={"#616161"}
             >
-              {language ? "+82 10-2999-1157" : "010-2999-1157"}
+              {language ? "(305) 495-0946" : "+1 (305) 495-0946"}
             </Typography>
           </Box>
         </Box>

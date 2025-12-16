@@ -5,7 +5,6 @@ import ProjectImage from "../images/projectImage.webp";
 import apix from "../images/apix.webp";
 import apixPage1 from "../images/apix_page_1.webp";
 import apixPage2 from "../images/apix_page_2.webp";
-import apixPage3 from "../images/apix_page_3.webp";
 import AngServiceImage from "../images/ang_service.webp";
 import AngServicePage1 from "../images/ang_service_page_1.webp";
 import AngServicePage2 from "../images/ang_service_page_2.webp";
@@ -19,19 +18,11 @@ import ShimpyoGuestModule from "../images/shimpyo_booking_module_guest.webp";
 import ShimpyoBookingUnregisteredModule from "../images/shimpyo_booking_unresgistered_module.webp";
 import ShimpyoConfirmationModule from "../images/shimpyo_booking_confirmation_module.webp";
 import ShimpyoPaymentModule from "../images/payment_module.webp";
-import FilmviewImage from "../images/filmview.webp";
-import FilmviewPage1 from "../images/filmview_page_1.webp";
-import FilmviewPage2 from "../images/filmview_page_2.webp";
-import FilmviewPage3 from "../images/filmview_page_3.webp";
-import FilmviewPage4 from "../images/filmview_page_4.webp";
 import LinkIcon from "../images/link_icon.png";
 import Link from "@mui/material/Link";
 import ProjectImageComponent from "../component/projectImage";
-import HoverProjectImageComponent from "../component/hoverProjectImage";
 import { ThirdSkillCarouselSmall } from "../component/thirdSkillCarouselSmall";
 import { ThirdSkillCarouselBig } from "../component/thirdSkillCarouselBig";
-import { ThirdSkillCarouselSmall2page } from "../component/thirdSkillCarouselSmall2page";
-import { ThirdSkillCarouselSmall4page } from "../component/thirdSkillCarouselSmall4page";
 import { useRef } from "react";
 import { ApixPage1, ApixPage2, ApixPage3 } from "../component/apix";
 import {
@@ -44,14 +35,6 @@ import {
   ShimpyoPage2Component,
   ShimpyoPage3Component,
 } from "../component/shimpyoProject";
-import {
-  FilmviewPage1Component,
-  FilmviewPage2Component,
-  FilmviewPage4_1Component,
-  FilmviewPage4_2Component,
-  FilmviewPage4_3Component,
-  FilmviewPage4_4Component,
-} from "../component/filmview";
 import { useTheme, useMediaQuery } from "@mui/material";
 
 const ThirdProject = forwardRef(({ language }, ref) => {
@@ -1071,274 +1054,6 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               {language
                 ? "Watch shimpyo.com demonstration"
                 : "shimpyo.com 시연영상 시청"}
-              <Box
-                sx={{
-                  marginLeft: "5px",
-                  backgroundImage: `url(${LinkIcon})`,
-                  height: { xs: 10, md: 14 },
-                  width: { xs: 10, md: 14 },
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-            </Link>
-          </Box>
-        </Box>
-      </Box>
-
-      <Box
-        ref={(fourthProject) => (projectRefs.current[3] = fourthProject)}
-        sx={{ marginBottom: "110px" }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginBottom: "100px",
-            position: "relative",
-          }}
-        >
-          <ProjectImageComponent
-            language={language}
-            English={"November 2022 - May 2023"}
-            Korean={"2022.11 - 2023.05"}
-            ImageSrc={FilmviewImage}
-            PaperHeight={{ xs: "30vw", md: "372px" }}
-            PaperWidth={{ xs: "100vw", md: "780px" }}
-            FontSize={30}
-            main={true}
-            exception={true}
-            MarginRight={{ xs: 0, md: "25px" }}
-          />
-
-          <Box
-            className="small"
-            display={{ xs: "block", lg: "none" }}
-            position={"absolute"}
-            height={"200px"}
-            width={"386px"}
-            top={{ xs: "20%", md: "60%" }}
-            left={{ xs: "50%", xsm: "10%" }}
-            sx={{
-              transform: {
-                xs: "translate(-50%, 0%)",
-                xsm: "translate(0%, 0%)",
-              },
-            }}
-          >
-            <ThirdSkillCarouselSmall4page
-              ref={(el) => (childrenRef.current[3] = el)}
-              First={FilmviewPage4_1Component}
-              Second={FilmviewPage4_2Component}
-              Third={FilmviewPage4_3Component}
-              Fourth={FilmviewPage4_4Component}
-              language={language}
-            />
-          </Box>
-
-          <Box
-            className="small"
-            display={{ xs: "none", lg: "block", xxl: "none" }}
-            position={"relative"}
-            height={"408px"}
-            width={"386px"}
-          >
-            <ThirdSkillCarouselSmall2page
-              ref={(el) => (childrenRef.current[7] = el)}
-              First={FilmviewPage1Component}
-              Second={FilmviewPage2Component}
-              language={language}
-            />
-          </Box>
-
-          <Box
-            display={{ xs: "none", xxl: "block" }}
-            marginRight={{ xs: "0px", xl: "25px" }}
-          >
-            <ProjectImageComponent
-              language={language}
-              English={"Landing page"}
-              Korean={"메인 페이지"}
-              ImageSrc={FilmviewPage1}
-              PaperHeight={"178px"}
-              PaperWidth={"386px"}
-              MarginBottom={"16px"}
-              MarginRight={"0px"}
-              BackgroundPosition={"top"}
-            />
-            <ProjectImageComponent
-              language={language}
-              English={"Account delete page"}
-              Korean={"계정 삭제 페이지"}
-              ImageSrc={FilmviewPage2}
-              PaperHeight={"178px"}
-              PaperWidth={"386px"}
-              MarginRight={"0px"}
-              BackgroundPosition={"top"}
-            />
-          </Box>
-          <Box display={{ xs: "none", xxl: "block" }}>
-            <ProjectImageComponent
-              language={language}
-              English={"Writing new movie review page"}
-              Korean={"영화 리뷰 작성 페이지"}
-              ImageSrc={FilmviewPage4}
-              PaperHeight={"178px"}
-              PaperWidth={"386px"}
-              MarginBottom={"16px"}
-              BackgroundPosition={"top"}
-            />
-            <ProjectImageComponent
-              language={language}
-              English={"Movie review page"}
-              Korean={"영화 리뷰 페이지"}
-              ImageSrc={FilmviewPage3}
-              PaperHeight={"178px"}
-              PaperWidth={"386px"}
-              BackgroundPosition={"top"}
-            />
-          </Box>
-        </Box>
-        <Box
-          marginLeft={{ xs: "50px", md: 0 }}
-          paddingRight={{ xs: "50px", md: 0 }}
-        >
-          <Box marginBottom={{ xs: "25px", md: "60px" }}>
-            <Typography
-              fontFamily={"Playfair Display"}
-              fontSize={{ xs: 20, md: 32 }}
-              marginBottom={"20px"}
-            >
-              Filmview
-            </Typography>
-            <Typography
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
-              fontWeight={200}
-              whiteSpace={{ xs: "pre-line", lg: "normal" }}
-            >
-              {language
-                ? "Filmview is a sandbox project for a movie review website."
-                : "영화 평론 사이트을 구현한 토이 프로젝트입니다."}
-            </Typography>
-            <Typography
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
-              fontWeight={200}
-              whiteSpace={{ xs: "pre-line", lg: "normal" }}
-            >
-              {language
-                ? "For this dynamic site, I designed and developed both the front-end and back-end, \nand handled the deployment independently."
-                : "동적 웹사이트로서 디자인, 프론트 엔드, 백 엔드, 배포를 혼자 담당하였습니다."}
-            </Typography>
-            <Typography
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
-              fontWeight={200}
-              whiteSpace={{ xs: "pre-line", lg: "normal" }}
-            >
-              {language
-                ? "Users can write, edit, delete, and search reviews, \nas well as log in locally or via Google and Naver OAuth."
-                : "게시물 생성, 수정, 삭제, 게시물 검색,  로컬 로그인, 구글 로그인, 네이버 로그인, "}
-            </Typography>
-            <Typography
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 20 }}
-              fontWeight={200}
-              whiteSpace={{ xs: "pre-line", lg: "normal" }}
-              marginBottom={"20px"}
-            >
-              {language
-                ? "Additionally, account creation and deletion are managed through email verification."
-                : "이메일을 통한 계정 생성, 이메일을 통한 계정 삭제 등이 가능합니다."}
-            </Typography>
-            <Box
-              sx={{
-                display: "inline-flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-              }}
-            >
-              <Typography
-                fontFamily={"Noto Sans KR"}
-                fontSize={14}
-                fontWeight={200}
-                marginRight={"25px"}
-              >
-                ▪️ React
-              </Typography>
-              <Typography
-                fontFamily={"Noto Sans KR"}
-                fontSize={14}
-                fontWeight={200}
-                marginRight={"25px"}
-              >
-                ▪️ Redux
-              </Typography>
-              <Typography
-                fontFamily={"Noto Sans KR"}
-                fontSize={14}
-                fontWeight={200}
-                marginRight={"25px"}
-              >
-                ▪️ MUI
-              </Typography>
-              <Typography
-                fontFamily={"Noto Sans KR"}
-                fontSize={14}
-                fontWeight={200}
-                marginRight={"25px"}
-              >
-                ▪️ Mongoose
-              </Typography>
-              <Typography
-                fontFamily={"Noto Sans KR"}
-                fontSize={14}
-                fontWeight={200}
-                marginRight={"25px"}
-              >
-                ▪️ Redis
-              </Typography>
-            </Box>
-          </Box>
-          <Box sx={{ display: "inline-flex", flexDirection: "column" }}>
-            <Link
-              href="https://github.com/johnpk1007/movie_project"
-              underline="none"
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 18 }}
-              fontWeight={200}
-              color={"black"}
-              display={"inline-flex"}
-              alignItems={"center"}
-              target="_blank"
-              rel="noopener"
-            >
-              {language ? "View source code" : "소스코드 확인"}
-              <Box
-                sx={{
-                  marginLeft: "5px",
-                  backgroundImage: `url(${LinkIcon})`,
-                  height: { xs: 10, md: 14 },
-                  width: { xs: 10, md: 14 },
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              />
-            </Link>
-            <Link
-              href="https://filmview.xyz/"
-              underline="none"
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={{ xs: 14, md: 18 }}
-              fontWeight={200}
-              color={"black"}
-              display={"inline-flex"}
-              alignItems={"center"}
-              target="_blank"
-              rel="noopener"
-            >
-              {language ? "Visit filmview.xyz" : "filmview.xyz 접속"}
               <Box
                 sx={{
                   marginLeft: "5px",
