@@ -236,14 +236,6 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             >
               Shimpyo
             </Typography>
-            <Typography
-              fontFamily={"Playfair Display"}
-              fontSize={{ xs: 11, md: 22 }}
-              textAlign={"right"}
-              color={"black"}
-            >
-              Filmview
-            </Typography>
           </Box>
         </Box>
       </Box>
