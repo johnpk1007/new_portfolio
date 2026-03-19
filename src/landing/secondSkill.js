@@ -176,7 +176,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontSize={{ xs: 20, md: 26, xl: 32 }}
             fontWeight={300}
           >
-            Basic
+            Languages
           </Typography>
           <Typography
             fontFamily={"Karla"}
@@ -193,7 +193,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontSize={{ xs: 20, md: 26, xl: 32 }}
             fontWeight={300}
           >
-            Framework & Library
+            Front-end
           </Typography>
           <Typography
             fontFamily={"Karla"}
@@ -201,7 +201,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontWeight={200}
             color={"#616161"}
           >
-            React, Next.js, TypeScript, Tailwind CSS, Redux, MUI, React Native
+            React, React Native, Next.js, TypeScript, Tailwind CSS
           </Typography>
         </Box>
         <Box>
@@ -227,7 +227,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontSize={{ xs: 20, md: 26, xl: 32 }}
             fontWeight={300}
           >
-            Back end
+            Back-end
           </Typography>
           <Typography
             fontFamily={"Karla"}
@@ -235,7 +235,7 @@ const SecondSkill = forwardRef(({ language }, ref) => (
             fontWeight={200}
             color={"#616161"}
           >
-            Node.js, Redis, Express
+            Nest.js, Prisma, PostgreSQL, AWS, Docker
           </Typography>
         </Box>
         <Box>
