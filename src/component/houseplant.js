@@ -32,8 +32,8 @@ export const HouseplantPage2 = ({ language }) => (
         />
         <ProjectImageComponent
             language={language}
-            English={"Product page"}
-            Korean={"상품 페이지"}
+            English={"Cart page"}
+            Korean={"카트 페이지"}
             ImageSrc={houseplant_3}
             PaperHeight={"45%"}
             PaperWidth={"100%"}
@@ -47,8 +47,8 @@ export const HouseplantPage3 = ({ language }) => (
     <Box display={"flex"} flexDirection={"column"} width={"100%"} height={"100%"}>
         <ProjectImageComponent
             language={language}
-            English={"Cart page"}
-            Korean={"카트 페이지"}
+            English={"Payment page"}
+            Korean={"결제 페이지"}
             ImageSrc={houseplant_4}
             PaperHeight={"45%"}
             PaperWidth={"100%"}
@@ -57,8 +57,8 @@ export const HouseplantPage3 = ({ language }) => (
         />
         <ProjectImageComponent
             language={language}
-            English={"Payment page"}
-            Korean={"결제 페이지"}
+            English={"Confirmation page"}
+            Korean={"확인 페이지"}
             ImageSrc={houseplant_5}
             PaperHeight={"45%"}
             PaperWidth={"100%"}
