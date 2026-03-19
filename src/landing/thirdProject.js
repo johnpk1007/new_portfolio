@@ -2,6 +2,12 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { forwardRef, useEffect } from "react";
 import ProjectImage from "../images/projectImage.webp";
+import houseplant from "../images/houseplant.webp"
+import houseplant1 from "../images/houseplant_1.webp"
+import houseplant2 from "../images/houseplant_2.webp"
+import houseplant3 from "../images/houseplant_3.webp"
+import houseplant4 from "../images/houseplant_4.webp"
+import houseplant5 from "../images/houseplant_5.webp"
 import apix from "../images/apix.webp";
 import apixPage1 from "../images/apix_page_1.webp";
 import apixPage2 from "../images/apix_page_2.webp";
@@ -24,6 +30,7 @@ import ProjectImageComponent from "../component/projectImage";
 import { ThirdSkillCarouselSmall } from "../component/thirdSkillCarouselSmall";
 import { ThirdSkillCarouselBig } from "../component/thirdSkillCarouselBig";
 import { useRef } from "react";
+import { HouseplantPage1, HouseplantPage2, HouseplantPage3 } from "../component/houseplant";
 import { ApixPage1, ApixPage2, ApixPage3 } from "../component/apix";
 import {
   AngServiceCorpPage1,
@@ -123,7 +130,6 @@ const ThirdProject = forwardRef(({ language }, ref) => {
     <Box
       ref={(thirdRef) => (ref.current[2] = thirdRef)}
       sx={{
-        // height: { xs: 2900, md: 3400 },
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -131,6 +137,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
         alignItems: "center",
       }}
     >
+
       <Box
         sx={{
           height: { xs: 60, md: 500 },
@@ -218,6 +225,14 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               textAlign={"right"}
               color={"black"}
             >
+              Houseplant E-commerce
+            </Typography>
+            <Typography
+              fontFamily={"Playfair Display"}
+              fontSize={{ xs: 11, md: 22 }}
+              textAlign={"right"}
+              color={"black"}
+            >
               API X API
             </Typography>
             <Typography
@@ -256,6 +271,271 @@ const ThirdProject = forwardRef(({ language }, ref) => {
         >
           <ProjectImageComponent
             language={language}
+            English={"October 2025 - March 2026"}
+            Korean={"2025.10 - 2026.03"}
+            ImageSrc={houseplant}
+            PaperHeight={{ xs: "30vw", md: "372px" }}
+            PaperWidth={{ xs: "100vw", md: "780px" }}
+            FontSize={30}
+            main={true}
+            MarginRight={{ xs: 0, md: "25px" }}
+          />
+
+          <Box
+            className="small"
+            display={{ xs: "block", lgxl: "none" }}
+            position={{ xs: "absolute", lg: "relative" }}
+            height={{ xs: "380px", md: "413px" }}
+            width={{ xs: "290px", md: "245px" }}
+            top={{ xs: "10%", lg: 0 }}
+            left={{ xs: "10%", lg: 0 }}
+          >
+            <ThirdSkillCarouselSmall
+              ref={(el) => (childrenRef.current[0] = el)}
+              First={HouseplantPage1}
+              Second={HouseplantPage2}
+              Third={HouseplantPage3}
+              language={language}
+            />
+          </Box>
+
+          <Box
+            className="big"
+            display={{ xs: "none", lgxl: "block", xxl: "none" }}
+            height={"380px"}
+            width={"500px"}
+          >
+            <ThirdSkillCarouselBig
+              ref={(el) => (childrenRef.current[4] = el)}
+              First={HouseplantPage1}
+              Second={HouseplantPage2}
+              Third={HouseplantPage3}
+              language={language}
+            />
+          </Box>
+          <ProjectImageComponent
+            language={language}
+            English={"Landing page"}
+            Korean={"메인 페이지"}
+            ImageSrc={houseplant1}
+            PaperHeight={"372px"}
+            PaperWidth={"245px"}
+            sizeProp="xxl"
+          />
+          <Box
+            width={"245px"}
+            height={"380px"}
+            display={isAboveBreakpoint ? "block" : "none"}
+            marginRight={"25px"}
+          >
+            <HouseplantPage2 language={language} />
+          </Box>
+          <Box
+            width={"245px"}
+            height={"380px"}
+            display={isAboveBreakpoint ? "block" : "none"}
+          >
+            <HouseplantPage3 language={language} />
+          </Box>
+        </Box>
+        <Box
+          marginLeft={{ xs: "50px", md: 0 }}
+          paddingRight={{ xs: "50px", md: 0 }}
+        >
+          <Box marginBottom={{ xs: "25px", md: "60px" }}>
+            <Typography
+              fontFamily={"Playfair Display"}
+              fontSize={{ xs: 20, md: 32 }}
+              marginBottom={"20px"}
+            >
+              Houseplant E-commerce
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
+            >
+              {language
+                ? "Houseplant E-commerce is a full-stack portfolio project"
+                : "실내식물 이커머스는 풀스택 포트폴리오 프로젝트로서"}
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
+            >
+              {language
+                ? "that demonstrates a complete online shopping experience,"
+                : "완전한 온라인 쇼핑 경험을 구현하였으며"}
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
+            >
+              {language
+                ? "including authentication, payments, and cloud storage."
+                : "인증, 결제, 클라우드 스토리지를 포함하였습니다."}
+            </Typography>
+            <Typography
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 20 }}
+              fontWeight={200}
+              whiteSpace={{ xs: "pre-line", lg: "normal" }}
+              marginBottom={"20px"}
+            >
+              {language
+                ? "I independently handled the design, front-end, and back-end development, and deployed the entire application."
+                : "디자인, 프론트엔드, 백엔드 개발 전반을 혼자 담당하고 웹사이트 배포까지 완료했습니다."}
+            </Typography>
+            <Box
+              sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+            >
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Figma
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Next.js
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Tailwind CSS
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Nest.js
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Prisma
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ PostgreSQL
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ AWS
+              </Typography>
+              <Typography
+                fontFamily={"Noto Sans KR"}
+                fontSize={14}
+                fontWeight={200}
+                marginRight={"25px"}
+              >
+                ▪️ Docker
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: "inline-flex",
+              flexDirection: "column",
+            }}
+          >
+            <Link
+              href="https://github.com/johnpk1007/houseplant-ecommerce"
+              underline="none"
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 18 }}
+              fontWeight={200}
+              color={"black"}
+              display={"inline-flex"}
+              alignItems={"center"}
+              target="_blank"
+              rel="noopener"
+            >
+              {language
+                ? "View source code of the website"
+                : "웹사이트 소스코드 확인"}
+              <Box
+                sx={{
+                  marginLeft: "5px",
+                  backgroundImage: `url(${LinkIcon})`,
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Link>
+            <Link
+              href="https://www.houseplant-portfolio.com/"
+              underline="none"
+              fontFamily={language ? "Karla" : "Noto Sans KR"}
+              fontSize={{ xs: 14, md: 18 }}
+              fontWeight={200}
+              color={"black"}
+              display={"inline-flex"}
+              alignItems={"center"}
+              target="_blank"
+              rel="noopener"
+            >
+              {language ? "Visit houseplant-portfolio.com " : "houseplant-portfolio.com 접속"}
+              <Box
+                sx={{
+                  marginLeft: "5px",
+                  backgroundImage: `url(${LinkIcon})`,
+                  height: { xs: 10, md: 14 },
+                  width: { xs: 10, md: 14 },
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
+            </Link>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box
+        ref={(secondProject) => (projectRefs.current[1] = secondProject)}
+        sx={{
+          marginBottom: "110px",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            marginBottom: "100px",
+            position: "relative",
+          }}
+        >
+          <ProjectImageComponent
+            language={language}
             English={"July 2024 - August 2024"}
             Korean={"2024.07 - 2024.08"}
             ImageSrc={apix}
@@ -270,14 +550,13 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             className="small"
             display={{ xs: "block", lgxl: "none" }}
             position={{ xs: "absolute", lg: "relative" }}
-            // height={"380px"}
             height={{ xs: "380px", md: "413px" }}
             width={{ xs: "290px", md: "245px" }}
             top={{ xs: "10%", lg: 0 }}
             left={{ xs: "10%", lg: 0 }}
           >
             <ThirdSkillCarouselSmall
-              ref={(el) => (childrenRef.current[0] = el)}
+              ref={(el) => (childrenRef.current[1] = el)}
               First={ApixPage1}
               Second={ApixPage2}
               Third={ApixPage3}
@@ -292,7 +571,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             width={"500px"}
           >
             <ThirdSkillCarouselBig
-              ref={(el) => (childrenRef.current[4] = el)}
+              ref={(el) => (childrenRef.current[5] = el)}
               First={ApixPage1}
               Second={ApixPage2}
               Third={ApixPage3}
@@ -559,7 +838,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       </Box>
 
       <Box
-        ref={(secondProject) => (projectRefs.current[1] = secondProject)}
+        ref={(thirdProject) => (projectRefs.current[2] = thirdProject)}
         sx={{
           marginBottom: "110px",
         }}
@@ -595,7 +874,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             left={{ xs: "10%", lg: 0 }}
           >
             <ThirdSkillCarouselSmall
-              ref={(el) => (childrenRef.current[1] = el)}
+              ref={(el) => (childrenRef.current[2] = el)}
               First={AngServiceCorpPage1}
               Second={AngServiceCorpPage2}
               Third={AngServiceCorpPage3}
@@ -610,7 +889,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             width={"500px"}
           >
             <ThirdSkillCarouselBig
-              ref={(el) => (childrenRef.current[5] = el)}
+              ref={(el) => (childrenRef.current[6] = el)}
               First={AngServiceCorpPage1}
               Second={AngServiceCorpPage2}
               Third={AngServiceCorpPage3}
@@ -761,7 +1040,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
       </Box>
 
       <Box
-        ref={(thirdProject) => (projectRefs.current[2] = thirdProject)}
+        ref={(fourthProject) => (projectRefs.current[3] = fourthProject)}
         sx={{
           marginBottom: "110px",
         }}
@@ -798,7 +1077,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             left={{ xs: "10%", lg: 0 }}
           >
             <ThirdSkillCarouselSmall
-              ref={(el) => (childrenRef.current[2] = el)}
+              ref={(el) => (childrenRef.current[3] = el)}
               First={ShimpyoPage1Component}
               Second={ShimpyoPage2Component}
               Third={ShimpyoPage3Component}
@@ -813,7 +1092,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
             width={"500px"}
           >
             <ThirdSkillCarouselBig
-              ref={(el) => (childrenRef.current[6] = el)}
+              ref={(el) => (childrenRef.current[7] = el)}
               First={ShimpyoPage1Component}
               Second={ShimpyoPage2Component}
               Third={ShimpyoPage3Component}
