@@ -801,6 +801,7 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                   width: { xs: 10, md: 14 },
                   backgroundSize: "cover",
                   backgroundPosition: "center",
+                  flexShrink: 0
                 }}
               />
             </Link>
