@@ -724,7 +724,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                   backgroundImage: `url(${LinkIcon})`,
                   height: { xs: 10, md: 14 },
                   width: { xs: 10, md: 14 },
-                  backgroundSize: "cover",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               />
@@ -750,7 +751,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                   backgroundImage: `url(${LinkIcon})`,
                   height: { xs: 10, md: 14 },
                   width: { xs: 10, md: 14 },
-                  backgroundSize: "cover",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               />
@@ -799,7 +801,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                   backgroundImage: `url(${LinkIcon})`,
                   height: { xs: 10, md: 14 },
                   width: { xs: 10, md: 14 },
-                  backgroundSize: "cover",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               />
@@ -825,7 +828,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
                   backgroundImage: `url(${LinkIcon})`,
                   height: { xs: 10, md: 14 },
                   width: { xs: 10, md: 14 },
-                  backgroundSize: "cover",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
               />
