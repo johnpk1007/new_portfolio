@@ -623,8 +623,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               whiteSpace={{ xs: "pre-line", lg: "normal" }}
             >
               {language
-                ? "It is a sandbox project using Youtube API and Billboard."
-                : "유튜브 API와 빌보드를 이용한 토이 프로젝트 입니다."}
+                ? "It is a portfolio project using Youtube API and Billboard."
+                : "유튜브 API와 빌보드를 이용한 포트폴리오 프로젝트 입니다."}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
@@ -1212,8 +1212,8 @@ const ThirdProject = forwardRef(({ language }, ref) => {
               whiteSpace={{ xs: "pre-line", xl: "normal" }}
             >
               {language
-                ? "Shimpyo is a group sandbox project for a hotel booking website. \nOur team consisted of six developers: three front-end and three back-end. "
-                : "숙박 플랫폼을 구현한 그룹 토이 프로젝트입니다. \n프론트 엔드 3명, 백 엔드 3명, 총 6명의 팀원이 참여하였으며"}
+                ? "Shimpyo is a group project for a hotel booking website. \nOur team consisted of six developers: three front-end and three back-end. "
+                : "숙박 플랫폼을 구현한 그룹 프로젝트입니다. \n프론트 엔드 3명, 백 엔드 3명, 총 6명의 팀원이 참여하였으며"}
             </Typography>
             <Typography
               fontFamily={language ? "Karla" : "Noto Sans KR"}
