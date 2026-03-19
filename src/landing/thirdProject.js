@@ -4,10 +4,6 @@ import { forwardRef, useEffect } from "react";
 import ProjectImage from "../images/projectImage.webp";
 import houseplant from "../images/houseplant.webp"
 import houseplant1 from "../images/houseplant_1.webp"
-import houseplant2 from "../images/houseplant_2.webp"
-import houseplant3 from "../images/houseplant_3.webp"
-import houseplant4 from "../images/houseplant_4.webp"
-import houseplant5 from "../images/houseplant_5.webp"
 import apix from "../images/apix.webp";
 import apixPage1 from "../images/apix_page_1.webp";
 import apixPage2 from "../images/apix_page_2.webp";
