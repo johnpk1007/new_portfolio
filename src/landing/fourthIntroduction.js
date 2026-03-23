@@ -131,37 +131,6 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
           >
             <Box
               sx={{
-                backgroundImage: `url(${BirthdayIcon})`,
-                height: "18px",
-                width: "18px",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                marginRight: "15px",
-              }}
-            />
-            <Typography
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={
-                language
-                  ? { xs: 14, sm: 17, md: 20 }
-                  : { xs: 14, sm: 16, md: 18 }
-              }
-              fontWeight={200}
-              color={"#616161"}
-              textAlign={"left"}
-            >
-              {language ? "10.7.1992" : "1992.10.07"}
-            </Typography>
-          </Box>
-          <Box
-            display={"flex"}
-            flexDirection={"row"}
-            justifyContent={"flex-start"}
-            alignItems={"center"}
-            marginBottom={"15px"}
-          >
-            <Box
-              sx={{
                 backgroundImage: `url(${GraduationIcon})`,
                 height: "18px",
                 width: "18px",
@@ -213,35 +182,6 @@ const FourthIntroduction = forwardRef(({ language }, ref) => (
               color={"#616161"}
             >
               johnpk1007@gmail.com
-            </Typography>
-          </Box>
-          <Box
-            display={"flex"}
-            flexDirection={"row"}
-            alignItems={"center"}
-            marginBottom={"15px"}
-          >
-            <Box
-              sx={{
-                backgroundImage: `url(${PhoneIcon})`,
-                height: "18px",
-                width: "18px",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                marginRight: "15px",
-              }}
-            />
-            <Typography
-              fontFamily={language ? "Karla" : "Noto Sans KR"}
-              fontSize={
-                language
-                  ? { xs: 14, sm: 17, md: 20 }
-                  : { xs: 14, sm: 16, md: 18 }
-              }
-              fontWeight={200}
-              color={"#616161"}
-            >
-              {language ? "(305) 495-0946" : "+1 (305) 495-0946"}
             </Typography>
           </Box>
         </Box>
